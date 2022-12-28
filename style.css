@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+
+.header-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-cont .logo {
+  color: blue;
+  size: 18px;
+  font-weight: 700;
+}
+
+.general-info ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.general-info ul > :first-child {
+  margin-left: 0;
+}
+
+.general-info li {
+  margin: 10px;
+}
