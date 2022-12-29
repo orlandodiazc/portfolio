@@ -46,16 +46,12 @@ button {
   text-decoration: underline;
 }
 
-/* Headline */
-
-.main {
-  background-image: url("images/bg-generalinfo.png");
-  background-repeat: no-repeat;
-}
+/* Headline // about me */
 
 .headline {
+  background-image: url("images/bg-generalinfo.png");
+  background-repeat: no-repeat;
   padding: 120px 4.3%;
-  min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -66,12 +62,12 @@ button {
   font-size: 40px;
   color: #172b4d;
   font-weight: 700;
-  padding-right: 30%;
 }
 
 .headline-info,
 .about-info {
   color: #344563;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -86,10 +82,8 @@ button {
 .about-external {
   display: flex;
   align-items: center;
-
-  margin: 12px 0 0 0;
-  padding: 0;
 }
+
 .headline-external a,
 .about-external a {
   display: flex;
@@ -98,6 +92,10 @@ button {
 .headline-external li,
 .about-external li {
   margin-right: 20px;
+}
+
+.about-external-pos {
+  padding-left: 9px;
 }
 
 .headline-external a:hover,
@@ -189,13 +187,14 @@ button {
 }
 
 .works button {
-  margin-top: 18px;
+  margin-top: 10px;
 }
 
 /* About */
 
 .about {
   padding: 0px 4.3%;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
