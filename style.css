@@ -15,6 +15,18 @@ li {
   list-style: none;
 }
 
+button {
+  padding: 12px;
+  border: 1px solid #6070ff;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #396df2;
+}
+
 /* Toolbar */
 .header {
   display: flex;
@@ -44,44 +56,52 @@ li {
 .headline {
   padding: 120px 4.3%;
   min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.headline-title {
+.headline-title,
+.about-title {
   font-size: 40px;
   color: #172b4d;
   font-weight: 700;
   padding-right: 30%;
 }
 
-.headline-about {
-  margin-top: 12px;
+.headline-info,
+.about-info {
   color: #344563;
   font-weight: 400;
 }
 
-.headline-connect {
+.headline-connect,
+.about-connect {
   font-weight: 500;
   font-size: 16px;
-  margin-top: 12px;
   color: #7f8cff;
 }
 
-.headline-external {
+.headline-external,
+.about-external {
   display: flex;
   align-items: center;
 
   margin: 12px 0 0 0;
   padding: 0;
 }
-.headline-external a {
+.headline-external a,
+.about-external a {
   display: flex;
 }
 
-.headline-external li {
+.headline-external li,
+.about-external li {
   margin-right: 20px;
 }
 
-.headline-external a:hover {
+.headline-external a:hover,
+.about-external a:hover {
   background-color: rgb(96, 112, 255);
 }
 
@@ -170,13 +190,17 @@ li {
 
 .works button {
   margin-top: 18px;
-  padding: 12px;
-  border: 1px solid #6070ff;
-  background-color: #fff;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: #396df2;
+}
+
+.about {
+  padding: 0px 4.3%;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about button {
+  margin-top: 20px;
+  align-self: flex-start;
 }
