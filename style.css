@@ -11,6 +11,10 @@ html {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 /* Toolbar */
 .header {
   display: flex;
@@ -65,7 +69,7 @@ html {
 .headline-external {
   display: flex;
   align-items: center;
-  list-style: none;
+
   margin: 12px 0 0 0;
   padding: 0;
 }
@@ -79,4 +83,100 @@ html {
 
 .headline-external a:hover {
   background-color: rgb(96, 112, 255);
+}
+
+/*Works*/
+
+.works {
+  display: grid;
+}
+
+.work-card {
+  margin: 4.3%;
+  border: 1px solid #dfe1e6;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 85px;
+}
+
+.work-cont {
+  margin: 4.3%;
+}
+
+.work-cont img {
+  width: 100%;
+}
+
+.work-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.work-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.work-general {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.work-client {
+  color: #344563;
+}
+
+.work-client-disc {
+  color: #7a869a;
+}
+
+.work-client-disc::before {
+  content: "·";
+  font-size: 50px;
+  vertical-align: middle;
+  line-height: 20px;
+  margin-right: 10px;
+}
+
+.work-info p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.work-tags {
+  display: flex;
+  gap: 12px;
+}
+
+.work-tags li {
+  background: #ebebff;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+}
+
+.works button {
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px solid #6070ff;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #396df2;
 }
