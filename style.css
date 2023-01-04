@@ -27,6 +27,19 @@ button {
   color: #396df2;
 }
 
+button:hover {
+  background-color: #dddedf;
+  cursor: pointer;
+}
+
+.button:focus {
+  background-color: #dddedf;
+}
+
+.button:active {
+  background-color: #dddedf;
+}
+
 /* Toolbar */
 .header {
   display: flex;
@@ -46,11 +59,17 @@ button {
   text-decoration: underline;
 }
 
+header button {
+  border: none;
+  display: flex;
+}
+
 /* Headline // about me */
 
 .headline {
   background-image: url("images/bg-generalinfo.png");
   background-repeat: no-repeat;
+  background-position: top right;
   padding: 120px 4.3%;
   display: flex;
   flex-direction: column;
@@ -100,7 +119,7 @@ button {
 
 .headline-external a:hover,
 .about-external a:hover {
-  background-color: rgb(96, 112, 255);
+  background-color: #396df2;
 }
 
 /* Works */
@@ -237,4 +256,76 @@ button {
   background: #f7f7f9;
   border-radius: 8px;
   padding: 9px;
+}
+
+/* Footer / Contact Form */
+
+.contact-me {
+  background-image: url("images/contact-form-shapes-mobile.svg");
+  margin-top: 90px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: #6070ff;
+  border-top-left-radius: 15%;
+}
+
+.contact-cont {
+  padding: 90px 4.3% 45px 4.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.contact-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.contact-info {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ebebff;
+}
+
+.contact-cont form ul {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.contact-cont input[type="text"],
+.contact-cont input[type="email"] {
+  width: 100%;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #172b4d;
+}
+
+.contact-cont textarea {
+  width: 100%;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #172b4d;
+}
+
+.contact-cont form button {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
 }

@@ -16,7 +16,9 @@
   <body>
     <header class="header">
       <h1 class="logo">My Logo</h1>
-      <img src="images/hamb-icon.svg" alt="Hamburguer icon menu" />
+      <button>
+        <img src="images/hamb-icon.svg" alt="Hamburguer icon menu" />
+      </button>
     </header>
     <main class="main">
       <section class="headline">
@@ -169,22 +171,24 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <div class="contact-me">
+      <section class="contact-me">
+        <div class="contact-cont">
           <h1 class="contact-title">Contact Me</h1>
           <p class="contact-info">
             If you have an application you are interested in developing, a
             feature that you need built or a project that needs coding. I’d love
             to help with it
           </p>
-          <form action="" method="post">
+          <form action="https://formspree.io/f/xvonoapb" method="post">
             <ul>
               <li>
                 <input
                   type="text"
                   name="name"
                   id="user_name"
+                  maxlength="30"
                   placeholder="Name"
+                  required
                 />
               </li>
               <li>
@@ -193,20 +197,24 @@
                   name="email"
                   id="user_email"
                   placeholder="Email"
+                  required
                 />
               </li>
               <li>
                 <textarea
                   name="msg"
+                  rows="8"
+                  maxlength="500"
                   id="user_message"
                   placeholder="Write your message here"
+                  required
                 ></textarea>
               </li>
             </ul>
             <button type="submit">Get In Touch</button>
           </form>
         </div>
-      </footer>
+      </section>
     </main>
   </body>
 </html>
