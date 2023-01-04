@@ -59,7 +59,7 @@ button:hover {
   text-decoration: underline;
 }
 
-header button {
+.header-btn {
   border: none;
   display: flex;
 }
@@ -274,7 +274,7 @@ header button {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .contact-title {
