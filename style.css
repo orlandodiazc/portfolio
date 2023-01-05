@@ -11,13 +11,22 @@ html {
   padding: 0;
 }
 
+.hidden-desktop {
+  display: none;
+}
+
 li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: #172b4d;
+}
+
 button {
   padding: 12px;
-  border: 1px solid #6070ff;
+  border: 1px solid #7f8cff;
   background-color: #fff;
   border-radius: 8px;
   font-weight: 500;
@@ -27,8 +36,15 @@ button {
   color: #396df2;
 }
 
+button:enabled {
+  background: #fff;
+  border: 1px solid #7f8cff;
+}
+
 button:hover {
-  background-color: #dddedf;
+  background: #6070ff;
+  box-shadow: 0px 8px 16px rgba(64, 83, 252, 0.24);
+  color: #fff;
   cursor: pointer;
 }
 
@@ -37,7 +53,16 @@ button:hover {
 }
 
 .button:active {
-  background-color: #dddedf;
+  background-color: #2230d2;
+  color: #fff;
+}
+
+.button:disabled {
+  color: #5e6c84;
+}
+
+.main {
+  background-color: #e5e5e5;
 }
 
 /* Toolbar */
@@ -67,13 +92,20 @@ button:hover {
 /* Headline // about me */
 
 .headline {
-  background-image: url("images/bg-generalinfo.png");
+  display: flex;
+  background-image: url("images/bg-generalinfo.svg");
+  background-color: #fff;
+  border-bottom-left-radius: 50px;
   background-repeat: no-repeat;
-  background-position: top right;
-  padding: 120px 4.3%;
+  background-size: cover;
+  justify-content: center;
+}
+
+.headline-cont {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+  margin: 120px 4.3%;
 }
 
 .headline-title,
@@ -129,11 +161,11 @@ button:hover {
 }
 
 .work-card {
+  display: grid;
   margin: 4.3%;
   border: 1px solid #dfe1e6;
   background: #fff;
   border-radius: 16px;
-  margin-bottom: 85px;
 }
 
 .work-cont {
@@ -147,7 +179,7 @@ button:hover {
 .work-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 .work-title {
@@ -212,11 +244,18 @@ button:hover {
 /* About */
 
 .about {
-  padding: 0 4.3%;
-  margin-bottom: 15px;
+  padding: 4.3%;
+  background-color: #fff;
+  border-top-right-radius: 50px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .about button {
@@ -261,12 +300,15 @@ button:hover {
 /* Footer / Contact Form */
 
 .contact-me {
+  background-color: #fff;
+}
+
+.contact-me-bg {
   background-image: url("images/contact-form-shapes-mobile.svg");
-  margin-top: 90px;
   background-repeat: no-repeat;
   background-position: top right;
   background-color: #6070ff;
-  border-top-left-radius: 15%;
+  border-top-left-radius: 50px;
 }
 
 .contact-cont {
@@ -323,9 +365,104 @@ button:hover {
 }
 
 .contact-cont form button {
+  display: block;
+  margin: 0 auto;
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 0.03em;
+  color: #fff;
+  border-width: 3px;
+  background-color: #6070ff;
+}
+
+.contact-cont form button:hover {
+  background-color: #fff;
   color: #6070ff;
+}
+
+/* RWD 768px Media Query*/
+
+@media screen and (min-width: 768px) {
+  .hidden {
+    display: none;
+  }
+
+  .hidden-desktop {
+    display: block;
+  }
+
+  .header-nav ul {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #344563;
+  }
+
+  .header-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .header {
+    padding: 0 9.6%;
+  }
+
+  .headline {
+    background-image: url("images/header-bg-desktop.svg");
+  }
+
+  .headline-cont {
+    max-width: 800px;
+  }
+
+  .contact-cont {
+    margin: 0 auto;
+  }
+
+  .work-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .work-cont button {
+    align-self: flex-start;
+  }
+
+  .work-info:nth-child(odd) {
+    order: 2;
+  }
+
+  .work-info:nth-child(even) {
+    order: 1;
+  }
+
+  .about {
+    flex-direction: row;
+  }
+
+  .about-me {
+    flex-basis: 40%;
+  }
+
+  .about-skills {
+    flex-grow: 1;
+  }
+
+  .language-list {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .language-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 150px;
+  }
+
+  .contact-cont {
+    max-width: 500px;
+  }
 }

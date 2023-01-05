@@ -16,41 +16,55 @@
   <body>
     <header class="header">
       <h1 class="logo">My Logo</h1>
-      <button class="header-btn">
+      <button class="header-btn hidden">
         <img src="images/hamb-icon.svg" alt="Hamburguer icon menu" />
       </button>
+      <nav class="header-nav hidden-desktop">
+        <ul>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
       <section class="headline">
-        <h1 class="headline-title">I'm Orlando Glad to see you!</h1>
-        <p class="headline-about">
-          I'm a software developer! I can help you build a product , feature or
-          website Look through some of my work and experience! If you like what
-          you see and have a project you need coded, don't hestiate to contact
-          me.
-        </p>
-        <h1 class="headline-connect">LET'S CONNECT</h1>
-        <ul class="headline-external">
-          <li>
-            <a href="#"><img src="images/twitter.svg" alt="Twitter icon" /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/linkedin.svg" alt="Linked-in icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/medium.svg" alt="Medium icon" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/github.svg" alt="Github icon" /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/angellist.svg" alt="Angel List Icon"
-            /></a>
-          </li>
-        </ul>
+        <div class="headline-cont">
+          <h1 class="headline-title">
+            I'm Orlando <br />
+            Glad to see you!
+          </h1>
+          <p class="headline-about">
+            I'm a software developer! I can help you build a product , feature
+            or website Look through some of my work and experience! If you like
+            what you see and have a project you need coded, don't hestiate to
+            contact me.
+          </p>
+          <h1 class="headline-connect">LET'S CONNECT</h1>
+          <ul class="headline-external">
+            <li>
+              <a href="#"
+                ><img src="images/twitter.svg" alt="Twitter icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/linkedin.svg" alt="Linked-in icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/medium.svg" alt="Medium icon" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/github.svg" alt="Github icon" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/angellist.svg" alt="Angel List Icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="works">
         <article class="work-card">
@@ -76,14 +90,14 @@
                 <li>CSS</li>
                 <li>JavaScript</li>
               </ul>
+              <button type="button" class="work-view">See Project</button>
             </div>
-            <button type="button" class="work-view">See Project</button>
           </div>
         </article>
         <article class="work-card">
           <div class="work-cont">
             <img
-              class="work-card-snapshot"
+              class="work-card-snapshot work-info"
               src="images/snapshot-tonic.png"
               alt="Webpage about daily reads"
             />
@@ -103,42 +117,46 @@
                 <li>CSS</li>
                 <li>JavaScript</li>
               </ul>
+              <button type="button" class="work-view-btn">See Project</button>
             </div>
-            <button type="button" class="work-view-btn">See Project</button>
           </div>
         </article>
       </section>
       <section class="about">
-        <h1 class="about-title">About Myself</h1>
-        <p class="about-info">
-          I'm a software developer! I can help you build a product , feature or
-          website Look through some of my work and experience! If you like what
-          you see and have a project you need coded, don't hestiate to contact
-          me.
-        </p>
-        <h1 class="about-connect">LET'S CONNECT</h1>
-        <ul class="about-external about-external-pos">
-          <li>
-            <a href="#"><img src="images/twitter.svg" alt="Twitter icon" /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/linkedin.svg" alt="Linked-in icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/medium.svg" alt="Medium icon" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/github.svg" alt="Github icon" /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/angellist.svg" alt="Angel List Icon"
-            /></a>
-          </li>
-        </ul>
-        <button type="button" class="about-btn">Get My Resume</button>
+        <div class="about-me">
+          <h1 class="about-title">About Myself</h1>
+          <p class="about-info">
+            I'm a software developer! I can help you build a product , feature
+            or website Look through some of my work and experience! If you like
+            what you see and have a project you need coded, don't hestiate to
+            contact me.
+          </p>
+          <h1 class="about-connect">LET'S CONNECT</h1>
+          <ul class="about-external about-external-pos">
+            <li>
+              <a href="#"
+                ><img src="images/twitter.svg" alt="Twitter icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/linkedin.svg" alt="Linked-in icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/medium.svg" alt="Medium icon" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/github.svg" alt="Github icon" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/angellist.svg" alt="Angel List Icon"
+              /></a>
+            </li>
+          </ul>
+          <button type="button" class="about-btn">Get My Resume</button>
+        </div>
         <div class="about-skills">
           <div class="about-lang">
             <div class="about-lang-nav skill-item">
@@ -172,47 +190,49 @@
         </div>
       </section>
       <section class="contact-me">
-        <div class="contact-cont">
-          <h1 class="contact-title">Contact Me</h1>
-          <p class="contact-info">
-            If you have an application you are interested in developing, a
-            feature that you need built or a project that needs coding. I’d love
-            to help with it
-          </p>
-          <form action="https://formspree.io/f/xvonoapb" method="post">
-            <ul>
-              <li>
-                <input
-                  type="text"
-                  name="name"
-                  id="user_name"
-                  maxlength="30"
-                  placeholder="Name"
-                  required
-                />
-              </li>
-              <li>
-                <input
-                  type="email"
-                  name="email"
-                  id="user_email"
-                  placeholder="Email"
-                  required
-                />
-              </li>
-              <li>
-                <textarea
-                  name="msg"
-                  rows="8"
-                  maxlength="500"
-                  id="user_message"
-                  placeholder="Write your message here"
-                  required
-                ></textarea>
-              </li>
-            </ul>
-            <button type="submit">Get In Touch</button>
-          </form>
+        <div class="contact-me-bg">
+          <div class="contact-cont">
+            <h1 class="contact-title">Contact Me</h1>
+            <p class="contact-info">
+              If you have an application you are interested in developing, a
+              feature that you need built or a project that needs coding. I’d
+              love to help with it
+            </p>
+            <form action="https://formspree.io/f/xvonoapb" method="post">
+              <ul>
+                <li>
+                  <input
+                    type="text"
+                    name="name"
+                    id="user_name"
+                    maxlength="30"
+                    placeholder="Name"
+                    required
+                  />
+                </li>
+                <li>
+                  <input
+                    type="email"
+                    name="email"
+                    id="user_email"
+                    placeholder="Email"
+                    required
+                  />
+                </li>
+                <li>
+                  <textarea
+                    name="msg"
+                    rows="8"
+                    maxlength="500"
+                    id="user_message"
+                    placeholder="Write your message here"
+                    required
+                  ></textarea>
+                </li>
+              </ul>
+              <button type="submit">Get In Touch</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
