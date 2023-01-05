@@ -99,6 +99,7 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
+  align-items: center;
 }
 
 .headline-cont {
@@ -158,11 +159,12 @@ button:hover {
 
 .works {
   display: grid;
+  gap: 5rem;
+  margin: 5rem 9.6%;
 }
 
 .work-card {
   display: grid;
-  margin: 4.3%;
   border: 1px solid #dfe1e6;
   background: #fff;
   border-radius: 16px;
@@ -317,6 +319,7 @@ button:hover {
   flex-direction: column;
   gap: 10px;
   color: #fff;
+  margin: 0 auto;
 }
 
 .contact-title {
@@ -371,14 +374,6 @@ button:hover {
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #fff;
-  border-width: 3px;
-  background-color: #6070ff;
-}
-
-.contact-cont form button:hover {
-  background-color: #fff;
-  color: #6070ff;
 }
 
 /* RWD 768px Media Query*/
@@ -410,11 +405,14 @@ button:hover {
   }
 
   .headline {
+    height: calc(100vh - 64px);
+    min-height: 500px;
     background-image: url("images/header-bg-desktop.svg");
   }
 
   .headline-cont {
     max-width: 800px;
+    margin: auto auto;
   }
 
   .contact-cont {
@@ -441,6 +439,7 @@ button:hover {
 
   .about {
     flex-direction: row;
+    padding: 4.3% 9.6%;
   }
 
   .about-me {
