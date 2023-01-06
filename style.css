@@ -34,6 +34,7 @@ button {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #396df2;
+  transition: background-color 0.5s ease;
 }
 
 button:enabled {
@@ -78,6 +79,17 @@ button:hover {
   font-size: 18px;
   font-weight: 700;
   color: #6070ff;
+  animation-name: rotate;
+  animation-duration: 0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .logo:hover {
@@ -176,6 +188,12 @@ button:hover {
 
 .work-cont img {
   width: 100%;
+  transition: all 0.2 ease;
+}
+
+.work-cont img:hover {
+  transform: scale(1.01);
+  cursor: pointer;
 }
 
 .work-info {
@@ -335,6 +353,11 @@ button:hover {
   font-size: 20px;
   line-height: 28px;
   color: #ebebff;
+  transition: all 0.2s ease;
+}
+
+.contact-info:hover {
+  transform: translate(1rem);
 }
 
 .contact-cont form ul {
@@ -462,6 +485,6 @@ button:hover {
   }
 
   .contact-cont {
-    max-width: 500px;
+    max-width: 600px;
   }
 }
