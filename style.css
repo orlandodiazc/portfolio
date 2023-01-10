@@ -171,8 +171,8 @@ button:hover {
 
 .works {
   display: grid;
-  gap: 5rem;
-  margin: 5rem 9.6%;
+  gap: 1rem;
+  margin: 1rem 4.3%;
 }
 
 .work-card {
@@ -269,13 +269,13 @@ button:hover {
   border-top-right-radius: 50px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .about-me {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .about button {
@@ -288,6 +288,10 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.about-skills h2 {
+  font-size: 20px;
 }
 
 .skill-item {
@@ -435,11 +439,17 @@ button:hover {
 
   .headline-cont {
     max-width: 800px;
-    margin: auto auto;
+    margin: auto;
+    padding: 0 2rem;
   }
 
   .contact-cont {
     margin: 0 auto;
+  }
+
+  .works {
+    gap: 2rem;
+    margin: 2rem 9.6%;
   }
 
   .work-cont {
@@ -481,7 +491,7 @@ button:hover {
   .language-list li {
     flex-direction: column;
     align-items: flex-start;
-    flex-basis: 150px;
+    flex-basis: 110px;
   }
 
   .contact-cont {
