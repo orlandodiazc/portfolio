@@ -11,7 +11,7 @@ html {
   padding: 0;
 }
 
-.hidden-desktop {
+.hidden-mobile {
   display: none;
 }
 
@@ -96,9 +96,43 @@ button:hover {
   text-decoration: underline;
 }
 
-.header-btn {
+.btn-header {
   border: none;
   display: flex;
+}
+
+.mobile-menu-active {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  top: 0;
+  left: 0;
+  background: #6070ff;
+  display: flex;
+}
+.mobile-menu-active a {
+  color: #fff;
+}
+
+.mobile-menu-active ul {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.mobile-menu-active .btn-mobile-exit {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  margin-left: auto;
 }
 
 /* Headline // about me */
@@ -406,11 +440,11 @@ button:hover {
 /* RWD 768px Media Query*/
 
 @media screen and (min-width: 768px) {
-  .hidden {
+  .hidden-desktop {
     display: none;
   }
 
-  .hidden-desktop {
+  .hidden-mobile {
     display: block;
   }
 
