@@ -99,7 +99,53 @@
           </ul>
         </div>
       </section>
-      <section class="works" id="portfolio"></section>
+      <section class="works" id="portfolio">
+        <!-- missing value and src -->
+        <template id="work-template"> 
+          <article class="work-card">
+            <div class="work-cont">
+              <img class="work-card-snapshot work-info" alt="Webpage descriptive picture" />
+              <div class="work-info">
+                <h1 class="work-title"></h1>
+                <ul class="work-general">
+                  <li class="work-client"></li>
+                  <li class="work-gen-disc work-role"></li>
+                  <li class="work-gen-disc work-year"></li>
+                </ul>
+                <p class="work-description"></p>
+                <ul class="work-tags">
+                </ul>
+                <button type="button" class="work-view-btn">See Project</button>
+              </div>
+            </div>
+          </article>
+        </template>
+        <div class="hide-modal">
+          <div class="work-modal-cont">
+            <div class="work-info">
+              <div class="modal-header">
+                <h1 class="work-title"></h1>
+                <button type="button" class="exit-modal"><img src="images/icons/menu_and_modals/IconCancel.svg" alt="Close Details"></button>
+              </div>
+              <ul class="work-general">
+                <li class="work-client"></li>
+                <li class="work-gen-disc work-role"></li>
+                <li class="work-gen-disc work-year"></li>
+              </ul>
+              <div class="snapshot-cont"><img class="work-card-snapshot work-info" alt="Webpage descriptive picture" /></div>
+            </div>
+            <p class="work-description"></p>
+            <div class="work-col-cont">
+              <ul class="work-tags">
+              </ul>
+              <div class="btn-work-cont">
+                <button type="button" class="btn-work-external">See Live</button>
+                <button type="button" class="btn-work-external">See Source</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="about" id="about">
         <div class="about-me">
           <h1 class="about-title">About Myself</h1>
@@ -247,6 +293,6 @@
       </section>
     </main>
     <script src="scripts/mobilemenu.js"></script>
-    <script src="scripts/detailspopup.js"></script>
+    <script src="scripts/detailsModal.js"></script>
   </body>
 </html>
