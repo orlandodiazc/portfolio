@@ -97,15 +97,21 @@ button:hover {
 }
 
 .btn-header {
+  background: none;
   border: none;
   display: flex;
 }
 
-.mobile-menu-active {
+.btn-header:enabled {
+  background: none;
+  border: none;
+}
+
+.hide-mobile-menu {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
-
+  display: none;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -113,27 +119,27 @@ button:hover {
   top: 0;
   left: 0;
   background: #6070ff;
-  display: flex;
-}
+  }
 
-.mobile-menu-active a {
+.hide-mobile-menu a {
   color: #fff;
 }
 
-.mobile-menu-active ul {
+.hide-mobile-menu ul {
   display: flex;
   width: 100%;
   gap: 1rem;
   flex-direction: column;
 }
 
-.mobile-menu-active .btn-exit {
+.exit-btn-cont {
+  display: flex;
+  justify-content: end;
+}
+
+.exit-btn-cont .btn-exit{
   background: none;
   border: none;
-  color: #fff;
-  font-size: 18px;
-  display: block;
-  margin-left: auto;
 }
 
 /* Headline // about me */

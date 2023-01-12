@@ -1,19 +1,11 @@
-const headerNav = document.querySelector('.header-nav');
-const header = document.querySelector('header');
-const btnOpen = document.querySelector('.btn-header');
-const navItems = document.querySelector('.header-nav ul');
+const btnOpenMenu = document.querySelector('.btn-header');
+const mobileMenu = document.querySelector('.hide-mobile-menu');
+const btnExit = document.querySelector('.btn-exit');
 
-function openMobileMenu() {
-  headerNav.classList.add('mobile-menu-active');
-  document.body.appendChild(headerNav);
-}
+btnOpenMenu.addEventListener('click', () => {
+  mobileMenu.style.display = 'block';
+});
 
-function closeMobileMenu(event) {
-  if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON') {
-    headerNav.classList.remove('mobile-menu-active');
-    header.appendChild(headerNav);
-  }
-}
-
-btnOpen.addEventListener('click', openMobileMenu);
-navItems.addEventListener('click', closeMobileMenu);
+btnExit.addEventListener('click', () => {
+  mobileMenu.style.display = 'none';
+});
