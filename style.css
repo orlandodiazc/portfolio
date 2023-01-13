@@ -478,6 +478,22 @@ button:hover {
   color: #172b4d;
 }
 
+.emailError {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.emailError.active {
+  padding: 0.3em;
+}
+
 .contact-cont textarea {
   width: 100%;
   border: 1px solid #cfd8dc;
