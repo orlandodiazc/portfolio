@@ -13,28 +13,30 @@
   </head>
   <body>
     <header class="header">
-      <a class="navbar-brand" href="/">Orlando Diaz</a>
-      <button type="button" class="btn-header hidden-desktop">
-        <img src="images/icons/menu_and_modals/hamb-icon.svg" alt="Hamburguer icon menu" />
-      </button>
-      <nav class="header-nav hidden-mobile">
-        <ul>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="hide-mobile-menu">
-        <ul>
-          <div class="exit-btn-cont">
-            <button type="button" class="btn-exit">
-              <img src="images/icons/menu_and_modals/icon-cancel-white.svg" alt="Close button" />
-            </button>
-          </div>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="navbar-container">
+        <a class="navbar-brand" href="/">Orlando Diaz</a>
+        <button type="button" class="btn-header hidden-desktop">
+          <img src="images/icons/menu_and_modals/hamb-icon.svg" alt="Hamburguer icon menu" />
+        </button>
+        <nav class="header-nav hidden-mobile">
+          <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hide-mobile-menu">
+          <ul class="nav-links">
+            <div class="exit-btn-cont">
+              <button type="button" class="btn-exit">
+                <img src="images/icons/menu_and_modals/icon-cancel-white.svg" alt="Close button" />
+              </button>
+            </div>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -52,20 +54,14 @@
           <h1 class="headline-connect">LET'S CONNECT</h1>
           <ul class="headline-external">
             <li>
-              <a href="#"
-                ><img src="images/icons/external_links/twitter.svg" alt="Twitter icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
+              <a href="https://www.linkedin.com/in/orlando-diaz-conde/" target="_blank"
                 ><img src="images/icons/external_links/linkedin.svg" alt="Linked-in icon"
               /></a>
             </li>
             <li>
-              <a href="#"><img src="images/icons/external_links/medium.svg" alt="Medium icon" /></a>
-            </li>
-            <li>
-              <a href="#"><img src="images/icons/external_links/github.svg" alt="Github icon" /></a>
+              <a href="https://github.com/orlandodiazc" target="_blank"
+                ><img src="images/icons/external_links/github.svg" alt="Github icon"
+              /></a>
             </li>
             <li>
               <a href="#"
@@ -73,20 +69,24 @@
               /></a>
             </li>
           </ul>
+          <button class="btn-about">Get My Resume</button>
         </div>
       </section>
       <section class="works" id="portfolio">
+        <h2 class="work-cont-title">My Recent Works</h2>
         <!-- missing value and src -->
         <template id="work-template">
           <article class="work-card">
             <div class="work-cont">
-              <img class="work-card-snapshot work-info" alt="Webpage descriptive picture" />
+              <div class="work-img-cont">
+                <img class="work-card-snapshot work-info" alt="Webpage descriptive picture" />
+              </div>
               <div class="work-info">
                 <h1 class="work-title"></h1>
-                <ul class="work-general">
+                <!-- <ul class="work-general">
                   <li class="work-role"></li>
                   <li class="work-gen-disc work-year"></li>
-                </ul>
+                </ul> -->
                 <p class="work-description"></p>
                 <ul class="work-tags"></ul>
                 <button type="button" class="work-view-btn">See Project</button>
@@ -103,11 +103,11 @@
                   <img src="images/icons/menu_and_modals/IconCancel.svg" alt="Close Details" />
                 </button>
               </div>
-              <ul class="work-general">
+              <!-- <ul class="work-general">
                 <li class="work-client"></li>
                 <li class="work-gen-disc work-role"></li>
                 <li class="work-gen-disc work-year"></li>
-              </ul>
+              </ul> -->
               <div class="snapshot-cont">
                 <img class="work-card-snapshot work-info" alt="Webpage descriptive picture" />
               </div>
@@ -116,14 +116,18 @@
             <div class="work-col-cont">
               <ul class="work-tags"></ul>
               <div class="btn-work-cont">
-                <button type="button" class="btn-work-external">See Live</button>
-                <button type="button" class="btn-work-external">See Source</button>
+                <a href="" id="btn-live" target="_blank"
+                  ><button type="button" class="btn-work-external">See Live</button></a
+                >
+                <a href="" id="btn-source" target="_blank"
+                  ><button type="button" class="btn-work-external">See Source</button></a
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="about" id="about">
+      <section class="about" id="skills">
         <div class="skills">
           <div>
             <h2>Front-End Skills</h2>
@@ -184,7 +188,7 @@
                 <li>
                   <textarea
                     name="msg"
-                    rows="8"
+                    rows="4"
                     maxlength="500"
                     id="user_message"
                     placeholder="Write your message here"

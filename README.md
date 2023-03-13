@@ -25,7 +25,7 @@ After you're finished please remove all the comments and instructions!
 
 # Portfolio <a name="about-project"></a>
 
-**Portfolio** is a practice project to learn GitFlow and proper repo organization.
+**Portfolio** is a base HTML, CSS and JS project that shows my personal information.
 
 ## Built With <a name="built-with"></a>
 
@@ -34,10 +34,10 @@ After you're finished please remove all the comments and instructions!
 This project was created using:
 
 <details>
-  <summary>Client</summary>
   <ul>
     <li>HTML5</li>
     <li>CSS3</li>
+    <li>JavaScript</li>
   </ul>
 </details>
 
@@ -56,8 +56,8 @@ To get a local copy up and running, follow these steps.
 
 👤 **Orlando Diaz**
 
-- GitHub: [@githubhandle](https://github.com/ditod1)
-- LinkedIn: [LinkedIn](www.linkedin.com/in/orlando-diaz-conde)
+- GitHub: [@orlandodiazc](https://github.com/ditod1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/orlando-diaz-conde)
 
 <!-- FUTURE FEATURES -->
 

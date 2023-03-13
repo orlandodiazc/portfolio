@@ -4,28 +4,28 @@ const modal = document.querySelector('.hide-modal');
 
 const projectLibrary = [
   {
-    name: 'asdf',
-    role: 'asdf',
-    year: '2020',
-    image: '../images/portfolio/snapshot-tonic.png',
-    description: 'ararga',
-    tech: ['asdfaf', 'asdfa', 'awefawef'],
+    name: 'Space Travelers',
+    image: '../images/portfolio/spacetravelers.png',
+    description: 'SPA that shows up-to-date data on Space-X missions and rockets',
+    tech: ['React', 'Redux', 'Redux Toolkit', 'Bootstrap'],
   },
   {
-    name: 'asdf',
-    role: 'asdf',
-    year: '2021',
-    image: 'https://picsum.photos/300/200',
-    description: 'ararga',
-    tech: ['asdfaf', 'asdfa', 'awefawef'],
+    name: 'Mathematicians',
+    image: '../images/portfolio/spacetravelers.png',
+    description:
+      'Single Page Application that allows the user to make quick calculations, it also has welcome and quote pages',
+    tech: ['React', 'Jest', 'Bootstrap', 'React Testing Library'],
+    liveLink: 'https://effulgent-douhua-34f1cc.netlify.app/',
+    sourceLink: 'https://github.com/orlandodiazc/mathematicians',
   },
   {
-    name: 'asdf',
-    role: 'asdf',
-    year: '2022',
-    image: 'https://picsum.photos/300/200',
-    description: 'ararga',
-    tech: ['asdfaf', 'asdfa', 'awefawef'],
+    name: 'Todo List',
+    image: '../images/portfolio/spacetravelers.png',
+    description:
+      'To do list is JavaScript project that allows you to add, delete and edit your daily tasks.',
+    tech: ['Javascript', 'CSS', 'HTML5', 'Webpack'],
+    liveLink: 'https://stunning-bonbon-dbeffd.netlify.app/',
+    sourceLink: 'https://github.com/orlandodiazc/to-do-list',
   },
 ];
 function displayProjects(projects) {
@@ -33,9 +33,6 @@ function displayProjects(projects) {
     const projClone = workTemplate.content.cloneNode(true);
     projClone.querySelector('.work-card-snapshot').src = proj.image;
     projClone.querySelector('.work-title').innerText = proj.name;
-    // projClone.querySelector('.work-client').innerText = proj.jobInfo.client;
-    projClone.querySelector('.work-role').innerText = proj.role;
-    projClone.querySelector('.work-year').innerText = proj.year;
     projClone.querySelector('.work-description').innerText = proj.description;
     const workTags = projClone.querySelector('.work-tags');
     proj.tech.forEach((item) => {
@@ -53,11 +50,10 @@ displayProjects(projectLibrary);
 function openModal(e) {
   const proj = projectLibrary[e.target.value];
   modal.querySelector('.work-title').innerText = proj.name;
-  // modal.querySelector('.work-client').innerText = proj.jobInfo.client;
-  modal.querySelector('.work-role').innerText = proj.role;
-  modal.querySelector('.work-year').innerText = proj.year;
   modal.querySelector('.work-card-snapshot').src = proj.image;
   modal.querySelector('.work-description').innerText = proj.description;
+  modal.querySelector('#btn-live').href = proj.liveLink;
+  modal.querySelector('#btn-source').href = proj.sourceLink;
   const workTags = modal.querySelector('.work-tags');
   workTags.replaceChildren();
   proj.tech.forEach((item) => {
@@ -65,11 +61,13 @@ function openModal(e) {
     li.innerText = item;
     workTags.appendChild(li);
   });
-  modal.style.display = 'flex';
+  modal.style.display = 'grid';
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
 }
 
 const btnSeeProjects = document.querySelectorAll('.work-view-btn');
