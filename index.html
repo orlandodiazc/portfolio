@@ -7,21 +7,15 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
     <title>Portfolio - Orlando Diaz</title>
   </head>
   <body>
     <header class="header">
-      <h1 class="logo">My Logo</h1>
+      <a class="navbar-brand" href="/">Orlando Diaz</a>
       <button type="button" class="btn-header hidden-desktop">
-        <img
-          src="images/icons/menu_and_modals/hamb-icon.svg"
-          alt="Hamburguer icon menu"
-        />
+        <img src="images/icons/menu_and_modals/hamb-icon.svg" alt="Hamburguer icon menu" />
       </button>
       <nav class="header-nav hidden-mobile">
         <ul>
@@ -34,10 +28,7 @@
         <ul>
           <div class="exit-btn-cont">
             <button type="button" class="btn-exit">
-              <img
-                src="images/icons/menu_and_modals/icon-cancel-white.svg"
-                alt="Close button"
-              />
+              <img src="images/icons/menu_and_modals/icon-cancel-white.svg" alt="Close button" />
             </button>
           </div>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -54,46 +45,31 @@
             Glad to see you!
           </h1>
           <p class="headline-about">
-            I'm a software developer! I can help you build a product , feature
-            or website Look through some of my work and experience! If you like
-            what you see and have a project you need coded, don't hestiate to
-            contact me.
+            I'm a software developer! I can help you build a product , feature or website Look
+            through some of my work and experience! If you like what you see and have a project you
+            need coded, don't hesitate to contact me.
           </p>
           <h1 class="headline-connect">LET'S CONNECT</h1>
           <ul class="headline-external">
             <li>
               <a href="#"
-                ><img
-                  src="images/icons/external_links/twitter.svg"
-                  alt="Twitter icon"
+                ><img src="images/icons/external_links/twitter.svg" alt="Twitter icon"
               /></a>
             </li>
             <li>
               <a href="#"
-                ><img
-                  src="images/icons/external_links/linkedin.svg"
-                  alt="Linked-in icon"
+                ><img src="images/icons/external_links/linkedin.svg" alt="Linked-in icon"
               /></a>
             </li>
             <li>
-              <a href="#"
-                ><img
-                  src="images/icons/external_links/medium.svg"
-                  alt="Medium icon"
-              /></a>
+              <a href="#"><img src="images/icons/external_links/medium.svg" alt="Medium icon" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icons/external_links/github.svg" alt="Github icon" /></a>
             </li>
             <li>
               <a href="#"
-                ><img
-                  src="images/icons/external_links/github.svg"
-                  alt="Github icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="images/icons/external_links/angellist.svg"
-                  alt="Angel List Icon"
+                ><img src="images/icons/external_links/angellist.svg" alt="Angel List Icon"
               /></a>
             </li>
           </ul>
@@ -101,20 +77,18 @@
       </section>
       <section class="works" id="portfolio">
         <!-- missing value and src -->
-        <template id="work-template"> 
+        <template id="work-template">
           <article class="work-card">
             <div class="work-cont">
               <img class="work-card-snapshot work-info" alt="Webpage descriptive picture" />
               <div class="work-info">
                 <h1 class="work-title"></h1>
                 <ul class="work-general">
-                  <li class="work-client"></li>
-                  <li class="work-gen-disc work-role"></li>
+                  <li class="work-role"></li>
                   <li class="work-gen-disc work-year"></li>
                 </ul>
                 <p class="work-description"></p>
-                <ul class="work-tags">
-                </ul>
+                <ul class="work-tags"></ul>
                 <button type="button" class="work-view-btn">See Project</button>
               </div>
             </div>
@@ -125,19 +99,22 @@
             <div class="work-info">
               <div class="modal-header">
                 <h1 class="work-title"></h1>
-                <button type="button" class="exit-modal"><img src="images/icons/menu_and_modals/IconCancel.svg" alt="Close Details"></button>
+                <button type="button" class="exit-modal">
+                  <img src="images/icons/menu_and_modals/IconCancel.svg" alt="Close Details" />
+                </button>
               </div>
               <ul class="work-general">
                 <li class="work-client"></li>
                 <li class="work-gen-disc work-role"></li>
                 <li class="work-gen-disc work-year"></li>
               </ul>
-              <div class="snapshot-cont"><img class="work-card-snapshot work-info" alt="Webpage descriptive picture" /></div>
+              <div class="snapshot-cont">
+                <img class="work-card-snapshot work-info" alt="Webpage descriptive picture" />
+              </div>
             </div>
             <p class="work-description"></p>
             <div class="work-col-cont">
-              <ul class="work-tags">
-              </ul>
+              <ul class="work-tags"></ul>
               <div class="btn-work-cont">
                 <button type="button" class="btn-work-external">See Live</button>
                 <button type="button" class="btn-work-external">See Source</button>
@@ -147,101 +124,36 @@
         </div>
       </section>
       <section class="about" id="about">
-        <div class="about-me">
-          <h1 class="about-title">About Myself</h1>
-          <p class="about-info">
-            I'm a software developer! I can help you build a product , feature
-            or website Look through some of my work and experience! If you like
-            what you see and have a project you need coded, don't hestiate to
-            contact me.
-          </p>
-          <h1 class="about-connect">LET'S CONNECT</h1>
-          <ul class="about-external about-external-pos">
-            <li>
-              <a href="#"
-                ><img
-                  src="images/icons/external_links/twitter.svg"
-                  alt="Twitter icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="images/icons/external_links/linkedin.svg"
-                  alt="Linked-in icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="images/icons/external_links/medium.svg"
-                  alt="Medium icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="images/icons/external_links/github.svg"
-                  alt="Github icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="images/icons/external_links/angellist.svg"
-                  alt="Angel List Icon"
-              /></a>
-            </li>
-          </ul>
-          <button type="button" class="about-btn">Get My Resume</button>
-        </div>
-        <div class="about-skills">
-          <div class="about-lang">
-            <div class="about-lang-nav skill-item">
-              <h2>Languages</h2>
-              <img
-                src="images/icons/about_skills/chevron-right-icon.svg"
-                alt="Dropdown"
-              />
-            </div>
-
-            <ul class="language-list skill-item">
-              <li>
-                <img
-                  src="images/icons/about_skills/js-icon.png"
-                  alt="JavaScript logo"
-                />
-                <p class="language-list-item">JavaScript</p>
-              </li>
-              <li>
-                <img
-                  src="images/icons/about_skills/html-icon.png"
-                  alt="HTML logo"
-                />
-                <p class="language-list-item">HTML</p>
-              </li>
-              <li>
-                <img
-                  src="images/icons/about_skills/css-icon.png"
-                  alt="CSS logo"
-                />
-                <p class="language-list-item">CSS</p>
-              </li>
+        <div class="skills">
+          <div>
+            <h2>Front-End Skills</h2>
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Boostrap</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Jest</li>
             </ul>
           </div>
-          <div class="about-frame skill-item">
-            <h2>Frameworks</h2>
-            <img
-              src="images/icons/about_skills/chevron-down-icon.svg"
-              alt="Dropdown"
-            />
+          <div>
+            <h2>Tools and Methods</h2>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Netlify</li>
+              <li>TDD</li>
+              <li>Responsive Development</li>
+            </ul>
           </div>
-          <div class="about-personal skill-item">
-            <h2>Skills</h2>
-            <img
-              src="images/icons/about_skills/chevron-down-icon.svg"
-              alt="Dropdown"
-            />
+          <div>
+            <h2>Soft Skills</h2>
+            <ul>
+              <li>Creative thinking</li>
+              <li>Teamwork</li>
+              <li>Leadirship</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -250,9 +162,8 @@
           <div class="contact-cont">
             <h1 class="contact-title">Contact Me</h1>
             <p class="contact-info">
-              If you have an application you are interested in developing, a
-              feature that you need built or a project that needs coding. I’d
-              love to help with it
+              If you have an application you are interested in developing, a feature that you need
+              built or a project that needs coding. I’d love to help with it
             </p>
             <form>
               <ul>
@@ -267,13 +178,7 @@
                   />
                 </li>
                 <li>
-                  <input
-                    type="email"
-                    name="email"
-                    id="user_email"
-                    placeholder="Email"
-                    required
-                  />
+                  <input type="email" name="email" id="user_email" placeholder="Email" required />
                   <span class="emailError"></span>
                 </li>
                 <li>
