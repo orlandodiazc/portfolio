@@ -44,7 +44,7 @@ button:enabled {
 
 button:hover {
   background: #6070ff;
-  box-shadow: 0px 8px 16px rgba(64, 83, 252, 0.24);
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   color: #fff;
   cursor: pointer;
 }
@@ -246,8 +246,8 @@ button:hover {
   position: fixed;
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   place-items: center;
@@ -470,12 +470,10 @@ textarea {
 .emailError {
   width: 100%;
   padding: 0;
-
   font-size: 80%;
   color: white;
   background-color: #900;
   border-radius: 0 0 5px 5px;
-
   box-sizing: border-box;
 }
 
@@ -503,7 +501,7 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-/* RWD 768px Media Query*/
+/* RWD 768px Media Query */
 
 @media screen and (min-width: 768px) {
   .hidden-desktop {
@@ -523,6 +521,10 @@ textarea {
     color: #344563;
   }
 
+  .btn-work-cont a {
+    margin: 0;
+  }
+
   .header-nav a:hover {
     text-decoration: underline;
   }
@@ -539,10 +541,6 @@ textarea {
     max-width: 800px;
     margin: auto;
     padding: 0 2rem;
-  }
-
-  .contact-cont {
-    margin: 0 auto;
   }
 
   .works {
@@ -588,10 +586,6 @@ textarea {
     gap: 0.5rem;
   }
 
-  .btn-work-cont a {
-    margin: 0;
-  }
-
   .work-card:nth-child(even) .work-img-cont {
     order: 1;
   }
@@ -621,6 +615,7 @@ textarea {
   }
 
   .contact-cont {
+    margin: 0 auto;
     max-width: 600px;
   }
 }

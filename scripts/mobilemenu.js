@@ -11,8 +11,6 @@ btnExit.addEventListener('click', () => {
   mobileMenu.style.display = 'none';
 });
 
-navLinks.forEach((link) =>
-  link.addEventListener('click', () => {
-    mobileMenu.style.display = 'none';
-  }),
-);
+navLinks.forEach((link) => link.addEventListener('click', () => {
+  mobileMenu.style.display = 'none';
+}));
