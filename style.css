@@ -70,13 +70,12 @@ button:hover {
 .header {
   position: fixed;
   width: 100%;
-  padding: 0 4.3%;
   z-index: 500;
-  background-color: white;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 0.7);
 }
 
 .navbar-container {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,6 +154,7 @@ button:hover {
   background-size: cover;
   justify-content: center;
   align-items: center;
+  padding-block: 7rem;
   min-height: 100vh;
 }
 
@@ -167,7 +167,7 @@ button:hover {
 
 .headline-title,
 .about-title {
-  font-size: 40px;
+  font-size: 60px;
   color: #172b4d;
   font-weight: 700;
 }
@@ -221,7 +221,7 @@ button:hover {
 .works {
   display: grid;
   gap: 1rem;
-  padding: 2.4rem 1rem;
+  padding-block: 2.4rem;
 }
 
 .work-cont-title {
@@ -238,8 +238,6 @@ button:hover {
 
 .work-img-cont {
   order: -1;
-  display: grid;
-  place-items: center;
 }
 
 .hide-modal {
@@ -551,7 +549,7 @@ textarea {
 
   .work-cont-title {
     font-size: 40px;
-    margin-inline: 3rem;
+    margin: 0;
   }
 
   .work-cont {

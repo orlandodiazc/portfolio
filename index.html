@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,9 +21,9 @@
         </button>
         <nav class="header-nav hidden-mobile">
           <ul>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
         <div class="hide-mobile-menu">
@@ -32,9 +33,9 @@
                 <img src="images/icons/menu_and_modals/icon-cancel-white.svg" alt="Close button" />
               </button>
             </div>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -42,16 +43,13 @@
     <main class="main">
       <section class="headline">
         <div class="headline-cont">
-          <h1 class="headline-title">
-            I'm Orlando <br />
-            Glad to see you!
-          </h1>
+          <h1 class="headline-title">Hola, Soy Orlando</h1>
           <p class="headline-about">
-            I'm a software developer! I can help you build a product , feature or website Look
-            through some of my work and experience! If you like what you see and have a project you
-            need coded, don't hesitate to contact me.
+            Desarrollador de software Front-End, puedo ayudarle a crear un sitio web, un producto o
+            una funcionalidad. A continuacion encontraras algunos de mis trabajos y experiencia, si
+            alguno te gusta y necesitas ayuda con un proyecto, no dudes en ponerte en contacto.
           </p>
-          <h1 class="headline-connect">LET'S CONNECT</h1>
+          <h1 class="headline-connect">CONECTEMOS</h1>
           <ul class="headline-external">
             <li>
               <a href="https://www.linkedin.com/in/orlando-diaz-conde/" target="_blank"
@@ -64,16 +62,20 @@
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="https://wellfound.com/u/orlando-diaz-conde" target="_blank"
                 ><img src="images/icons/external_links/angellist.svg" alt="Angel List Icon"
               /></a>
             </li>
           </ul>
-          <button class="btn-about">Get My Resume</button>
+          <a
+            href="https://docs.google.com/document/d/1ob48nGaTdvJbgWP7j1NaM-nHuzHx9P2P1fnGk-Yz2gE/edit?usp=sharing"
+            target="_blank"
+            ><button class="btn-about">Obten mi CV</button></a
+          >
         </div>
       </section>
       <section class="works" id="portfolio">
-        <h2 class="work-cont-title">My Recent Works</h2>
+        <h2 class="work-cont-title">Trabajos Destacados</h2>
         <!-- missing value and src -->
         <template id="work-template">
           <article class="work-card">
@@ -89,7 +91,7 @@
                 </ul> -->
                 <p class="work-description"></p>
                 <ul class="work-tags"></ul>
-                <button type="button" class="work-view-btn">See Project</button>
+                <button type="button" class="work-view-btn">Ver Proyecto</button>
               </div>
             </div>
           </article>
@@ -130,7 +132,7 @@
       <section class="about" id="skills">
         <div class="skills">
           <div>
-            <h2>Front-End Skills</h2>
+            <h2>Front-End</h2>
             <ul>
               <li>JavaScript</li>
               <li>React</li>
@@ -142,7 +144,7 @@
             </ul>
           </div>
           <div>
-            <h2>Tools and Methods</h2>
+            <h2>Herrramientas y Metodos</h2>
             <ul>
               <li>Git</li>
               <li>GitHub</li>
@@ -152,7 +154,7 @@
             </ul>
           </div>
           <div>
-            <h2>Soft Skills</h2>
+            <h2>Profesionales</h2>
             <ul>
               <li>Creative thinking</li>
               <li>Teamwork</li>
@@ -164,10 +166,10 @@
       <section class="contact-me" id="contact">
         <div class="contact-me-bg">
           <div class="contact-cont">
-            <h1 class="contact-title">Contact Me</h1>
+            <h1 class="contact-title">Contactame</h1>
             <p class="contact-info">
-              If you have an application you are interested in developing, a feature that you need
-              built or a project that needs coding. I’d love to help with it
+              Si usted tiene una aplicación que está interesado/a en desarrollar, una característica
+              o un proyecto que necesite programacion. Me encantaría ayudarle.
             </p>
             <form>
               <ul>
@@ -177,12 +179,12 @@
                     name="name"
                     id="user_name"
                     maxlength="30"
-                    placeholder="Name"
+                    placeholder="Nombre"
                     required
                   />
                 </li>
                 <li>
-                  <input type="email" name="email" id="user_email" placeholder="Email" required />
+                  <input type="email" name="email" id="user_email" placeholder="Correo" required />
                   <span class="emailError"></span>
                 </li>
                 <li>
@@ -191,12 +193,12 @@
                     rows="4"
                     maxlength="500"
                     id="user_message"
-                    placeholder="Write your message here"
+                    placeholder="Escriba su mensaje aqui"
                     required
                   ></textarea>
                 </li>
               </ul>
-              <button type="submit">Get In Touch</button>
+              <button type="submit">Contactar Ahora</button>
             </form>
           </div>
         </div>
