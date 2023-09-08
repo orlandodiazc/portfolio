@@ -1,0 +1,60 @@
+---
+import "styles/reset.css";
+import "styles/globals.css";
+import "@fontsource-variable/inter";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Orlando's portfolio" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<script is:inline>
+function applyTheme(theme) {
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+  const matches = document.querySelectorAll(
+    "[data-toggle-color-scheme] > input"
+  );
+
+  if (matches && matches.length) {
+    matches.forEach((elem) => {
+      elem.checked = theme !== "dark";
+    });
+  }
+}
+
+const defaultTheme = "system";
+if (
+  (defaultTheme && defaultTheme.endsWith(":only")) ||
+  (!localStorage.theme && defaultTheme !== "system")
+) {
+  applyTheme(defaultTheme.replace(":only", ""));
+} else if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  applyTheme("dark");
+} else {
+  applyTheme("light");
+}
+</script>
