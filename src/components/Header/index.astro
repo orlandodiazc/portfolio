@@ -8,11 +8,13 @@ const navItems = [
 ];
 ---
 
-<div class="header__wrapper">
+<div class="header__wrapper header-no-border">
   <header class="container header">
-    <a href="#home"><Image src={logo} alt="Website logo" height={22} /></a>
+    <a href="#home" class="logo-wrapper">
+      <Image src={logo} alt="Website logo" height={32} />
+    </a>
     <nav class="navigation-menu">
-      <ul class="navigation-menu__list">
+      <ul class="navigation-menu__list list">
         {
           navItems.map(({ name, href }) => (
             <li>
@@ -42,14 +44,13 @@ const navItems = [
           <path d="m6 6 12 12"></path>
         </g>
         <g class="mobile-menu">
-          <line x1="4" x2="20" y1="12" y2="12"></line>
-          <line x1="4" x2="20" y1="6" y2="6"></line>
-          <line x1="4" x2="20" y1="18" y2="18"></line>
+          <line x1="4" x2="20" y1="8" y2="8"></line>
+          <line x1="4" x2="20" y1="16" y2="16"></line>
         </g>
       </svg>
     </button>
     <nav class="container mobile-menu mobile-menu__wrapper hidden">
-      <ul>
+      <ul class="list">
         {
           navItems.map(({ name, href }) => (
             <li>
@@ -62,112 +63,129 @@ const navItems = [
       </ul>
     </nav>
   </header>
-</div>
 
-<style lang="scss">
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  ul {
-    padding: 0;
-    list-style: none;
-  }
-
-  button {
-    height: 2rem;
-    aspect-ratio: 1;
-    color: var(--foreground);
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #888;
-    border-radius: 100%;
-  }
-
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-
-    &__wrapper {
-      position: sticky;
-      top: 0;
-      z-index: 2000;
-      display: flex;
-      justify-content: center;
-      min-height: 4rem;
-    }
-  }
-
-  .mobile-menu {
-    a:hover {
-      background-color: #111;
+  <style lang="scss">
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    &__wrapper {
-      position: fixed;
-      top: 3rem;
-      left: 0;
-      z-index: 2000;
-      width: 100%;
-      max-width: 100vw;
-      padding-block-start: 0.5rem;
-      overflow-y: auto;
+    button {
+      height: 2rem;
+      aspect-ratio: 1;
+      color: var(--foreground);
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid var(--border);
+      border-radius: 100%;
     }
 
-    &__link {
+    .header {
       display: flex;
       align-items: center;
-      height: 3rem;
-      color: #999;
-      border-block-end: 1px solid;
+      justify-content: space-between;
+      width: 100%;
+
+      &__wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+        display: flex;
+        justify-content: center;
+        min-height: 4rem;
+        background-color: transparent;
+        transition:
+          box-shadow 200ms ease 0s,
+          background-color 200ms ease 0s;
+      }
     }
-  }
 
-  .navigation-menu {
-    display: none;
-
-    a:hover {
-      color: white;
-    }
-
-    &__list {
-      display: flex;
-      gap: 1rem;
-    }
-
-    &__link {
-      color: #a1a1a1;
-    }
-  }
-
-  @media (width >= 720px) {
-    #mobile-menu-toggle {
-      display: none;
+    .header-border {
+      background-color: var(--background);
+      box-shadow: var(--header-box-shadow);
     }
 
     .mobile-menu {
-      display: none;
+      &__wrapper {
+        position: fixed;
+        top: 3rem;
+        left: 0;
+        z-index: 2000;
+        width: 100%;
+        max-width: 100vw;
+        padding-block-start: 0.5rem;
+        overflow-y: auto;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        color: var(--muted-foreground);
+        border-block-end: 1px solid;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+          background-color: var(--muted);
+        }
+      }
     }
 
     .navigation-menu {
-      display: block;
+      display: none;
+
+      &__list {
+        display: flex;
+        gap: 1.75rem;
+      }
+
+      &__link {
+        color: var(--muted-foreground);
+        transition: 200ms ease-in-out;
+
+        &:hover {
+          color: var(--foreground);
+        }
+      }
     }
-  }
-</style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.getElementById("mobile-menu-toggle");
-    const mobileMenu = document.querySelectorAll(".mobile-menu");
-    menuButton && menuButton.addEventListener("click", toggleMobileNav);
+    @media (width >= 720px) {
+      #mobile-menu-toggle {
+        display: none;
+      }
 
-    function toggleMobileNav() {
-      mobileMenu.forEach((el) => {
-        el.classList.toggle("hidden");
+      .mobile-menu {
+        display: none;
+      }
+
+      .navigation-menu {
+        display: block;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuButton = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.querySelectorAll(".mobile-menu");
+      menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+      function toggleMobileNav() {
+        mobileMenu.forEach((el) => {
+          el.classList.toggle("hidden");
+          document.body.style.position =
+            document.body.style.position === "" ? "fixed" : "";
+        });
+      }
+      const headerWrapper = document.querySelector(".header__wrapper");
+      const root = document.documentElement;
+      document.addEventListener("scroll", () => {
+        if (root.scrollTop === 0) {
+          headerWrapper.classList.remove("header-border");
+        } else {
+          headerWrapper.classList.add("header-border");
+        }
       });
-    }
-  });
-</script>
+    });
+  </script>
+</div>
