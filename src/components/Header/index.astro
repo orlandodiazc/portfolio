@@ -8,9 +8,9 @@ const navItems = [
 ];
 ---
 
-<div class="header__wrapper header-no-border">
+<div class="header__wrapper">
   <header class="container header">
-    <a href="#home" class="logo-wrapper">
+    <a href="#home">
       <Image src={logo} alt="Website logo" height={32} />
     </a>
     <nav class="navigation-menu">
@@ -73,7 +73,7 @@ const navItems = [
     button {
       height: 2rem;
       aspect-ratio: 1;
-      color: var(--foreground);
+      color: #ededed;
       cursor: pointer;
       background-color: transparent;
       border: 1px solid var(--border);
@@ -113,8 +113,10 @@ const navItems = [
         z-index: 2000;
         width: 100%;
         max-width: 100vw;
+        height: 100%;
         padding-block-start: 0.5rem;
         overflow-y: auto;
+        background-color: var(--background);
       }
 
       &__link {
@@ -166,10 +168,6 @@ const navItems = [
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const menuButton = document.getElementById("mobile-menu-toggle");
-      const mobileMenu = document.querySelectorAll(".mobile-menu");
-      menuButton && menuButton.addEventListener("click", toggleMobileNav);
-
       function toggleMobileNav() {
         mobileMenu.forEach((el) => {
           el.classList.toggle("hidden");
@@ -177,12 +175,16 @@ const navItems = [
             document.body.style.position === "" ? "fixed" : "";
         });
       }
+      const menuButton = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.querySelectorAll(".mobile-menu");
+      menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
       const headerWrapper = document.querySelector(".header__wrapper");
       const root = document.documentElement;
       document.addEventListener("scroll", () => {
         if (root.scrollTop === 0) {
           headerWrapper.classList.remove("header-border");
-        } else {
+        } else if (!headerWrapper.classList.contains("header-border")) {
           headerWrapper.classList.add("header-border");
         }
       });
