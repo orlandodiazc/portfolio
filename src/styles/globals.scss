@@ -23,6 +23,7 @@ html {
 body {
   width: 100%;
   height: 100dvh;
+  font-size: 1rem;
   color: var(--foreground);
   background-color: var(--background);
 }
@@ -45,4 +46,35 @@ code {
 .list {
   padding: 0;
   list-style: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.75rem;
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  gap: 0.4rem;
+
+  &--primary {
+    color: var(--background);
+    background-color: var(--foreground);
+    transition: 150ms ease;
+    &:hover {
+      background-color: var(--muted-foreground);
+    }
+  }
+
+  &--secondary {
+    color: var(--foreground);
+    background-color: var(--background);
+    border: 1px solid var(--muted-foreground);
+    transition: 150ms ease;
+    &:hover {
+      background-color: var(--muted);
+    }
+  }
 }

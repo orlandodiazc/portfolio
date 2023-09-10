@@ -1,0 +1,169 @@
+<section class="container">
+  <div class="hero">
+    <div class="hero-blur hero-blur--primary"></div>
+    <div class="hero-blur hero-blur--secondary"></div>
+    <h1 class="hero__heading">Hey There! <br /> I'm Orlando Diaz</h1>
+    <h2 class="hero__sub-heading">Front-End Developer</h2>
+    <p class="hero__description">
+      Vercel's frontend cloud gives developers the frameworks, workflows, and
+      infrastructure to build a faster, more personalized Web.
+    </p>
+    <div class="hero__buttons">
+      <div class="hero__button-container">
+        <a href="#test" class="button button--primary">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 25 25"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-linkedin"
+              ><path
+                d="M 16 7 a 6 6 0 0 1 6 6 v 7 h -4 v -7 a 2 2 0 0 0 -2 -2 a 2 2 0 0 0 -2 2 v 7 h -4 v -7 a 6 6 0 0 1 6 -6 z"
+              ></path><rect width="4" height="12" x="2" y="8"></rect><circle
+                cx="4"
+                cy="3"
+                r="2"></circle></svg
+            ></span
+          >
+          <span>Connect</span>
+        </a>
+      </div>
+      <div class="hero__button-container">
+        <a href="#test" class="button button--secondary"
+          ><span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-mail-open"
+              ><path
+                d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"
+              ></path><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"
+              ></path></svg
+            ></span
+          ><span>Contact</span></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  a {
+    text-decoration: none;
+  }
+
+  .hero-blur {
+    position: absolute;
+    z-index: -1;
+    width: 85%;
+    height: 50%;
+    filter: blur(6rem);
+    border-radius: 50%;
+
+    &--primary {
+      top: 0;
+      background-color: #316325;
+      opacity: 0.35;
+    }
+
+    &--secondary {
+      bottom: 0;
+      background-color: #bf9c1c;
+      opacity: 0.2;
+    }
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100dvh - 4rem);
+    padding-block: 4rem;
+    text-align: center;
+
+    &__heading {
+      margin-bottom: 0.8rem;
+      font-size: 3.25rem; /* 4rem */
+      font-weight: 700;
+      line-height: 1;
+      color: #e0e6c8;
+      letter-spacing: -0.06em;
+    }
+
+    &__sub-heading {
+      margin-bottom: 1.5rem;
+      font-size: 2rem; /* 3rem */
+      font-weight: 600;
+      line-height: 1;
+      color: #3c7430;
+      letter-spacing: -0.04em;
+    }
+
+    &__description {
+      max-width: 70ch;
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--muted-foreground);
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__button-container {
+      padding-block: 0.75rem;
+    }
+
+    @media (width >= 720px) {
+      &__heading {
+        font-size: 4.5rem;
+      }
+
+      &__sub-heading {
+        font-size: 2.5rem;
+      }
+
+      &__description {
+        font-size: 1.5rem;
+      }
+
+      &__buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      &__button-container {
+        min-width: 15rem;
+        padding: 0.75rem;
+      }
+    }
+
+    @media (width >= 1280px) {
+      &__heading {
+        font-size: 5rem;
+      }
+
+      &__sub-heading {
+        font-size: 2.8rem;
+      }
+    }
+  }
+</style>
