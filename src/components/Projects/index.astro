@@ -1,0 +1,219 @@
+---
+import { Image } from "astro:assets";
+import ticTacToeImage from "./images/tic-tac-toe.png";
+import spacexTravelersImage from "./images/space-x-travelers.png";
+import mathematiciansImage from "./images/mathematicians.png";
+const PROJECTS = [
+  {
+    name: "Tic-Tac-Toe",
+    image: { src: ticTacToeImage, alt: "Tic tac toe website" },
+    description:
+      "Play Tic Tac Toe games vs. a CPU or another player in this SPA",
+    technologies: ["React", "TypeScript", "TailwindCSS"],
+    liveLink: "https://tic-tac-toe-orlando.vercel.app/",
+    sourceLink: "https://github.com/orlandodiazc/tic-tac-toe_ts",
+  },
+
+  {
+    name: "Space-Travelers",
+    image: { src: spacexTravelersImage, alt: "SpaceX website" },
+    description:
+      "SPA that allows you to browse upcoming SpaceX missions, select your preferred one, and reserve your spot with just a few clicks.",
+    technologies: ["React", "Jest", "React Testing Library", "Bootstrap"],
+    liveLink: "https://space-x-travelers.vercel.app/",
+    sourceLink: "https://github.com/orlandodiazc/space-x-travelers-ts",
+  },
+  {
+    name: "Mathematicians",
+    image: { src: mathematiciansImage, alt: "Mathematicians website" },
+    description:
+      "Single Page Application that allows the user to make quick calculations, it also has welcome and quote pages.",
+    technologies: ["React", "Jest", "Bootstrap", "React Testing Library"],
+    liveLink: "https://mathematicians.vercel.app/",
+    sourceLink: "https://github.com/orlandodiazc/mathematicians",
+  },
+];
+---
+
+<div class="container">
+  <section class="section">
+    <h2 class="section__title">PROJECTS</h2>
+    <div class="project-list">
+      {
+        PROJECTS.map((project) => (
+          <div class="project__wrapper">
+            <article class="project">
+              <div class="project__image-wrapper">
+                <Image
+                  class="project__image"
+                  src={project.image.src}
+                  width={640}
+                  height={400}
+                  alt={project.image.alt}
+                />
+              </div>
+              <div>
+                <h3 class="project__heading">{project.name}</h3>
+                <p class="project__description">{project.description}</p>
+                <ul class="project__technologies">
+                  {project.technologies.map((technology) => (
+                    <li class="project__tech-item">{technology}</li>
+                  ))}
+                </ul>
+                <div class="project__links">
+                  <a
+                    class="button button--primary"
+                    target="_blank"
+                    href={project.liveLink}
+                  >
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-link"
+                      >
+                        <>
+                          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                        </>
+                      </svg>
+                    </span>
+                    <span>See live</span>
+                  </a>
+                  <a
+                    class="button button--secondary"
+                    target="_blank"
+                    href={project.sourceLink}
+                  >
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <>
+                          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                          <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </>
+                      </svg>
+                    </span>
+                    <span>See code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style lang="scss">
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .section {
+    padding-block-end: 2rem;
+
+    &__title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project > div {
+    flex: 1;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    &__image {
+      width: auto;
+      height: auto;
+      border-radius: inherit;
+    }
+
+    &__wrapper {
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+    }
+
+    &__image-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 640px;
+      aspect-ratio: 16 / 10;
+      border-radius: 0.5rem;
+    }
+
+    &__heading {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+    }
+
+    &__description {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--muted-foreground);
+    }
+
+    &__technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__tech-item {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 0.25rem;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (width >= 720px) {
+    .project {
+      flex-direction: row;
+    }
+  }
+</style>
