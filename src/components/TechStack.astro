@@ -1,0 +1,130 @@
+<div class="container">
+  <section class="section">
+    <h2 class="section__title">Tech Stack</h2>
+    <div class="section__description-wrapper">
+      <p class="section__description">
+        Check some of my technologies, tools and methods
+      </p>
+    </div>
+    <div class="tech-stack">
+      <div class="tech-stack__title-wrapper">
+        <h3 class="tech-stack__title">Front-end</h3>
+      </div>
+      <ul class="tech-stack__list list">
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/javascript.svg" alt="Javascript" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/typescript.svg" alt="TypeScript" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/react.svg" alt="React" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/redux.svg" alt="Redux" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/jest.svg" alt="Jest" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/testing-library.png" alt="Testing Library" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/vitest.svg" alt="vitest" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/sass.svg" alt="Sass" />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img
+            src="/technologies/tailwind.svg"
+            alt="Tailwind"
+            title="Tailwind"
+          />
+        </li>
+        <li class="tech-stack__logo-wrapper">
+          <img src="/technologies/bootstrap.svg" alt="Bootstrap" />
+        </li>
+      </ul>
+    </div>
+    <div class="tech-stack">
+      <div class="tech-stack__title-wrapper">
+        <h3 class="tech-stack__title">Tools and Methods</h3>
+      </div>
+      <ul class="tech-stack__list list">
+        <li class="tech-stack__list-item">Git</li>
+        <li class="tech-stack__list-item">Responsive Development</li>
+        <li class="tech-stack__list-item">Gitflow</li>
+        <li class="tech-stack__list-item">Netlify | Vercel</li>
+        <li class="tech-stack__list-item">TDD</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<style lang="scss">
+  .tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+
+    &__title {
+      font-size: 1.75rem;
+      color: var(--accents-8);
+      letter-spacing: -0.02em;
+    }
+
+    &__title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-block-end: 1rem;
+      border-block-end: 1px solid var(--accents-8);
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      max-width: 960px;
+    }
+
+    &__logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+    }
+
+    &__list-item {
+      font-size: 1.25rem;
+      color: var(--accents-7);
+    }
+
+    @media (width >= 720px) {
+      flex-direction: row;
+
+      &__title-wrapper {
+        width: 35ch;
+        padding-block: 1rem;
+        text-align: center;
+        border-block-end: none;
+        border-inline-end: 1px solid var(--accents-2);
+      }
+
+      &__list {
+        justify-content: start;
+        margin-inline-start: 1rem;
+      }
+
+      &__list-item {
+        font-size: 1.5rem;
+      }
+    }
+  }
+</style>
