@@ -1,0 +1,104 @@
+<div class="container">
+  <section class="section" id="contact">
+    <h2 class="section__title">Contact</h2>
+    <div class="section__description-wrapper">
+      <p class="section__description">
+        If you have an application you are interested in developing, a feature
+        that you need built or a project that needs coding. I’d love to assist
+        you further.
+      </p>
+    </div>
+    <form action="https://formspree.io/f/meqwwwpw" method="post" class="form">
+      <div class="form__row">
+        <label for="name">Name</label>
+        <input id="name" name="Name" required placeholder="Pepito" />
+      </div>
+      <div class="form__row">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="_replyto"
+          placeholder="example@example.com"
+          required
+        />
+      </div>
+      <div class="form__row">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="Message"
+          required
+          placeholder="Write your message"></textarea>
+      </div>
+      <div class="form__button-wrapper">
+        <button class="button button--primary">Get In Touch</button>
+      </div>
+    </form>
+    <p class="contact__email">
+      You can also contact me at:
+      <a href="mailto:orlandodiazconde@gmail.com">
+        orlandodiazconde@gmail.com
+      </a>
+    </p>
+  </section>
+</div>
+
+<style lang="scss">
+  .contact {
+    &__email {
+      font-size: 1.1rem;
+      color: var(--accents-8);
+      text-align: center;
+
+      a {
+        color: var(--foreground);
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 3rem 2rem;
+    margin-block: 1.5rem;
+    margin-inline: auto;
+    border: 1px solid var(--accents-2);
+    border-radius: 1rem;
+
+    &__button-wrapper {
+      align-self: center;
+      width: 50%;
+    }
+
+    &__row {
+      margin-bottom: 1rem;
+
+      label {
+        display: inline-block;
+        font-size: 0.9rem;
+        color: var(--accents-4);
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        color: var(--foreground);
+        background-color: var(--accents-1);
+        border: 1px solid var(--accents-2);
+        border-radius: 0.3rem;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        color: var(--foreground);
+        background-color: #fff;
+        background-color: var(--accents-1);
+        border: 1px solid var(--accents-2);
+        border-radius: 0.3rem;
+      }
+    }
+  }
+</style>
