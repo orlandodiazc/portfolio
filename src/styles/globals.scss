@@ -109,4 +109,37 @@ code {
       background-color: var(--accents-1);
     }
   }
+
+  &--outline {
+    border: 1px solid var(--accents-3);
+  }
+}
+
+.section {
+  padding-block-start: 1rem;
+  padding-block-end: 4rem;
+  scroll-margin-top: 5rem;
+
+  &__title {
+    text-wrap: balance;
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--accents-8);
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  &__description-wrapper {
+    text-wrap: balance;
+    margin-inline: auto;
+  }
+
+  &__description {
+    color: var(--accents-5);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 }
