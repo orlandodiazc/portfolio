@@ -1,15 +1,14 @@
 <section class="container">
   <div class="hero">
-    <div class="hero-blur hero-blur--primary"></div>
-    <div class="hero-blur hero-blur--secondary"></div>
-    <h1 class="hero__heading">Hey There! <br /> I'm Orlando Diaz</h1>
-    <h2 class="hero__sub-heading">Front-End Developer</h2>
+    <h1 class="hero__title">Hey There! <br /> I'm Orlando Diaz</h1>
+    <h2 class="hero__subtitle">Front-End Developer</h2>
     <p class="hero__description">
       Vercel's frontend cloud gives developers the frameworks, workflows, and
       infrastructure to build a faster, more personalized Web.
     </p>
     <div class="hero__buttons">
       <div class="hero__button-container">
+        <!-- add link -->
         <a href="#test" class="button button--primary">
           <span
             ><svg
@@ -61,33 +60,7 @@
 </section>
 
 <style lang="scss">
-  a {
-    text-decoration: none;
-  }
-
-  .hero-blur {
-    position: absolute;
-    z-index: -1;
-    width: 85%;
-    height: 50%;
-    filter: blur(6rem);
-    border-radius: 50%;
-
-    &--primary {
-      top: 0;
-      background-color: #316325;
-      opacity: 0.35;
-    }
-
-    &--secondary {
-      bottom: 0;
-      background-color: #bf9c1c;
-      opacity: 0.2;
-    }
-  }
-
   .hero {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,48 +69,53 @@
     padding-block: 4rem;
     text-align: center;
 
-    &__heading {
-      margin-bottom: 0.8rem;
-      font-size: 3.25rem; /* 4rem */
+    &__title {
+      margin-bottom: 1.25rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      line-height: 1;
-      color: #e0e6c8;
-      letter-spacing: -0.06em;
+      line-height: 1.05;
+      color: var(--hero-title);
+      letter-spacing: -0.04em;
     }
 
-    &__sub-heading {
+    &__subtitle {
       margin-bottom: 1.5rem;
-      font-size: 2rem; /* 3rem */
+      font-size: 2.25rem;
       font-weight: 600;
       line-height: 1;
-      color: #3c7430;
+      color: var(--primary);
       letter-spacing: -0.04em;
     }
 
     &__description {
       max-width: 70ch;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       font-size: 1.25rem;
       font-weight: 400;
-      color: var(--muted-foreground);
+      line-height: 1.5;
+      color: var(--accents-5);
     }
 
     &__buttons {
       display: flex;
       flex-direction: column;
       width: 100%;
+
+      a {
+        text-decoration: none;
+      }
     }
 
     &__button-container {
-      padding-block: 0.75rem;
+      padding-block: 0.5rem;
     }
 
     @media (width >= 720px) {
-      &__heading {
-        font-size: 4.5rem;
+      &__title {
+        font-size: 5rem;
       }
 
-      &__sub-heading {
+      &__subtitle {
         font-size: 2.5rem;
       }
 
@@ -157,12 +135,12 @@
     }
 
     @media (width >= 1280px) {
-      &__heading {
-        font-size: 5rem;
+      &__title {
+        font-size: 5.5rem;
       }
 
-      &__sub-heading {
-        font-size: 2.8rem;
+      &__subtitle {
+        font-size: 2.75rem;
       }
     }
   }

@@ -1,30 +1,33 @@
 :root {
-  --accents-1: #fafafa;
-  --accents-2: #eaeaea;
-  --accents-3: #999;
-  --accents-4: #888;
-  --accents-5: #666;
-  --accents-6: #444;
-  --accents-7: #333;
-  --accents-8: #111;
-  --background: #fff;
-  --foreground: #000;
+  --accents-1: hsl(0, 0%, 95%);
+  --accents-2: hsl(0, 0%, 90%);
+  --accents-3: hsl(0, 0%, 70%);
+  --accents-4: hsl(0, 0%, 53%);
+  --accents-5: hsl(0, 0%, 40%);
+  --accents-6: hsl(0, 0%, 27%);
+  --accents-7: hsl(0, 0%, 13%);
+  --accents-8: hsl(0, 0%, 7%);
+  --primary: hsl(109, 41%, 32%);
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 0%);
+  --hero-title: hsl(0, 0%, 9%);
   --gray-alpha-400: rgba(0, 0, 0, 0.08);
   --header-box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%);
 }
 
 .dark {
-  --accents-8: #fafafa;
-  --accents-7: #eaeaea;
-  --accents-6: #999;
-  --accents-5: #888;
-  --accents-4: #666;
-  --accents-3: #444;
-  --accents-2: #333;
-  --accents-1: #111;
-  --background: #000;
-  --foreground: #fff;
-  --gray-alpha-400: hsla(0, 0%, 100%, 0.14);
+  --accents-8: hsl(0, 0%, 90%);
+  --accents-7: hsl(0, 0%, 85%);
+  --accents-6: hsl(0, 0%, 60%);
+  --accents-5: hsl(0, 0%, 53%);
+  --accents-4: hsl(0, 0%, 40%);
+  --accents-3: hsl(0, 0%, 27%);
+  --accents-2: hsl(0, 0%, 20%);
+  --accents-1: hsl(0, 0%, 7%);
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --hero-title: hsl(0, 0%, 93%);
+  --gray-alpha-400: rgba(255, 255, 255, 0.14);
   --header-box-shadow: inset 0 -1px 0 0 rgb(255 255 255 / 10%);
 }
 
