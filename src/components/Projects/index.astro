@@ -36,8 +36,11 @@ const PROJECTS = [
 ---
 
 <div class="container">
-  <section class="section">
-    <h2 class="section__title">PROJECTS</h2>
+  <section class="section" id="projects">
+    <h2 class="section__title">Projects</h2>
+    <p class="section__description">
+      Each project a unique piece of development.
+    </p>
     <div class="project-list">
       {
         PROJECTS.map((project) => (
@@ -45,7 +48,6 @@ const PROJECTS = [
             <article class="project">
               <div class="project__image-wrapper">
                 <Image
-                  class="project__image"
                   src={project.image.src}
                   width={640}
                   height={400}
@@ -53,11 +55,11 @@ const PROJECTS = [
                 />
               </div>
               <div>
-                <h3 class="project__heading">{project.name}</h3>
+                <h3 class="project__title">{project.name}</h3>
                 <p class="project__description">{project.description}</p>
-                <ul class="project__technologies">
+                <ul class="project__technologies list">
                   {project.technologies.map((technology) => (
-                    <li class="project__tech-item">{technology}</li>
+                    <li>{technology}</li>
                   ))}
                 </ul>
                 <div class="project__links">
@@ -88,7 +90,7 @@ const PROJECTS = [
                     <span>See live</span>
                   </a>
                   <a
-                    class="button button--secondary"
+                    class="button button--secondary button--outline"
                     target="_blank"
                     href={project.sourceLink}
                   >
@@ -123,32 +125,10 @@ const PROJECTS = [
 </div>
 
 <style lang="scss">
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .section {
-    padding-block-end: 2rem;
-
-    &__title {
-      margin-bottom: 1rem;
-    }
-  }
-
   .project-list {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-  }
-
-  .project > div {
-    flex: 1;
   }
 
   .project {
@@ -157,7 +137,11 @@ const PROJECTS = [
     gap: 1rem;
     padding: 1rem;
 
-    &__image {
+    > div {
+      flex: 1;
+    }
+
+    img {
       width: auto;
       height: auto;
       border-radius: inherit;
@@ -177,7 +161,7 @@ const PROJECTS = [
       border-radius: 0.5rem;
     }
 
-    &__heading {
+    &__title {
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
       font-weight: 600;
