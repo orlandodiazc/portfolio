@@ -65,19 +65,14 @@ const navItems = [
   </header>
 
   <style lang="scss">
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
     button {
       height: 2rem;
       aspect-ratio: 1;
-      color: #ededed;
+      color: var(--accents-4);
       cursor: pointer;
       background-color: transparent;
-      border: 1px solid var(--border);
-      border-radius: 100%;
+      border: 1px solid var(--gray-alpha-400);
+      border-radius: 50%;
     }
 
     .header {
@@ -101,7 +96,7 @@ const navItems = [
     }
 
     .header-border {
-      background-color: var(--background);
+      background-color: var(--background); /* transparent and blur */
       box-shadow: var(--header-box-shadow);
     }
 
@@ -123,12 +118,12 @@ const navItems = [
         display: flex;
         align-items: center;
         height: 3rem;
-        color: var(--muted-foreground);
-        border-block-end: 1px solid;
+        color: var(--accents-6);
+        border-block-end: 1px solid var(--accents-2);
         transition: 200ms ease-in-out;
 
         &:hover {
-          background-color: var(--muted);
+          background-color: var(--accents-1);
         }
       }
     }
@@ -136,17 +131,17 @@ const navItems = [
     .navigation-menu {
       display: none;
 
-      &__list {
+      ul {
         display: flex;
         gap: 1.75rem;
       }
 
       &__link {
-        color: var(--muted-foreground);
+        color: var(--accents-5);
         transition: 200ms ease-in-out;
 
         &:hover {
-          color: var(--foreground);
+          color: var(--accents-9);
         }
       }
     }
