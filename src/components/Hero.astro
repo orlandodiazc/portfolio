@@ -2,7 +2,7 @@
   <div class="hero">
     <h1 class="hero__title">Hey There! <br /> I'm Orlando Diaz</h1>
     <h2 class="hero__subtitle">Front-End Developer</h2>
-    <p class="hero__description">
+    <p class="section__description">
       Vercel's frontend cloud gives developers the frameworks, workflows, and
       infrastructure to build a faster, more personalized Web.
     </p>
@@ -70,12 +70,12 @@
     align-items: center;
     justify-content: center;
     min-height: calc(100dvh - 4rem);
-    padding-block: 3.5rem;
+    padding-block: 5rem;
     text-align: center;
 
     &__title {
       margin-bottom: 1rem;
-      font-size: 4rem;
+      font-size: 3.25rem;
       font-weight: 700;
       line-height: 1.05;
       color: var(--accents-8);
@@ -83,21 +83,12 @@
     }
 
     &__subtitle {
-      margin-bottom: 2.25rem;
-      font-size: 2.25rem;
+      margin-bottom: 1.75rem;
+      font-size: 1.85rem;
       font-weight: 600;
       line-height: 1;
       color: var(--primary);
       letter-spacing: -0.04em;
-    }
-
-    &__description {
-      margin-bottom: 2.5rem;
-      font-size: 1.25rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: var(--accents-5);
-      text-wrap: balance;
     }
 
     &__buttons {
@@ -114,16 +105,18 @@
       padding-block: 0.5rem;
     }
 
-    @media (width >= 720px) {
+    @media (width >= 640px) {
       &__title {
         font-size: 5rem;
       }
 
       &__subtitle {
-        font-size: 2.5rem;
+        margin-bottom: 2.25rem;
+        font-size: 2.75rem;
       }
 
       &__description {
+        margin-bottom: 2.5rem;
         font-size: 1.5rem;
       }
 
