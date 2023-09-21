@@ -1,13 +1,11 @@
 <div class="container">
   <section class="section" id="contact">
     <h2 class="section__title">Contact</h2>
-    <div class="section__description-wrapper">
-      <p class="section__description">
-        If you have an application you are interested in developing, a feature
-        that you need built or a project that needs coding. I’d love to assist
-        you further.
-      </p>
-    </div>
+    <p class="section__description">
+      If you have an application you are interested in developing, a feature
+      that you need built or a project that needs coding. I’d love to assist you
+      further.
+    </p>
     <form action="https://formspree.io/f/meqwwwpw" method="post" class="form">
       <div class="form__row">
         <label for="name">Name</label>
@@ -32,7 +30,9 @@
           placeholder="Write your message"></textarea>
       </div>
       <div class="form__button-wrapper">
-        <button class="button button--primary">Get In Touch</button>
+        <button class="button button--primary button--small"
+          >Get In Touch</button
+        >
       </div>
     </form>
     <p class="contact__email">
@@ -47,8 +47,8 @@
 <style lang="scss">
   .contact {
     &__email {
-      font-size: 1.1rem;
-      color: var(--accents-8);
+      font-size: 18px;
+      color: var(--accents-7);
       text-align: center;
 
       a {
@@ -61,11 +61,13 @@
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    padding: 3rem 2rem;
+    padding: 2.5rem 2.5rem 2rem;
     margin-block: 1.5rem;
     margin-inline: auto;
+    background-color: var(--accents-1);
     border: 1px solid var(--accents-2);
     border-radius: 1rem;
+    box-shadow: var(--form-shadow);
 
     &__button-wrapper {
       align-self: center;
@@ -77,26 +79,37 @@
 
       label {
         display: inline-block;
-        font-size: 0.9rem;
-        color: var(--accents-4);
+        margin: 0 0 1px 1px;
+        font-size: 15px;
+        color: var(--accents-7);
       }
 
       input {
         width: 100%;
         padding: 0.5rem;
         color: var(--foreground);
-        background-color: var(--accents-1);
-        border: 1px solid var(--accents-2);
+        background-color: inherit;
+        border: 1px solid var(--accents-3);
         border-radius: 0.3rem;
+        outline: none;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        background-clip: text;
+        box-shadow: inset 0 0 20px 20px var(--accents-2);
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: var(--foreground);
       }
 
       textarea {
         width: 100%;
         padding: 0.5rem;
         color: var(--foreground);
-        background-color: #fff;
-        background-color: var(--accents-1);
-        border: 1px solid var(--accents-2);
+        background-color: inherit;
+        border: 1px solid var(--accents-3);
         border-radius: 0.3rem;
       }
     }
