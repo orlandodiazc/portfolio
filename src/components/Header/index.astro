@@ -10,9 +10,11 @@ const navItems = [
 
 <div class="header__wrapper">
   <header class="container header">
-    <a href="#home">
-      <Image src={logo} alt="Website logo" height={32} />
-    </a>
+    <div class="header__logo-wrapper">
+      <a href="#top">
+        <Image src={logo} alt="Website logo" height={64} />
+      </a>
+    </div>
     <nav class="navigation-menu">
       <ul class="navigation-menu__list list">
         {
@@ -80,6 +82,18 @@ const navItems = [
       align-items: center;
       justify-content: space-between;
       width: 100%;
+
+      &__logo-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
 
       &__wrapper {
         position: sticky;
@@ -166,23 +180,32 @@ const navItems = [
       function toggleMobileNav() {
         mobileMenu.forEach((el) => {
           el.classList.toggle("hidden");
-          document.body.style.position =
-            document.body.style.position === "" ? "fixed" : "";
+          document.body.style.overflow =
+            document.body.style.overflow === "" ? "hidden" : "";
         });
       }
       const menuButton = document.getElementById("mobile-menu-toggle");
       const mobileMenu = document.querySelectorAll(".mobile-menu");
       menuButton && menuButton.addEventListener("click", toggleMobileNav);
 
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
+
+      mobileMenuLinks.forEach((link) =>
+        link.addEventListener("click", toggleMobileNav)
+      );
+
       const headerWrapper = document.querySelector(".header__wrapper");
       const root = document.documentElement;
-      document.addEventListener("scroll", () => {
+
+      function onScrollHandler() {
         if (root.scrollTop === 0) {
           headerWrapper.classList.remove("header-border");
         } else if (!headerWrapper.classList.contains("header-border")) {
           headerWrapper.classList.add("header-border");
         }
-      });
+      }
+
+      document.addEventListener("scroll", onScrollHandler);
     });
   </script>
 </div>
