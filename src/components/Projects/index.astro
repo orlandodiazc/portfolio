@@ -5,7 +5,7 @@ import spacexTravelersImage from "./images/space-x-travelers.png";
 import mathematiciansImage from "./images/mathematicians.png";
 const PROJECTS = [
   {
-    name: "Tic-Tac-Toe",
+    name: "Tic Tac Toe",
     image: { src: ticTacToeImage, alt: "Tic tac toe website" },
     description:
       "Play Tic Tac Toe games vs. a CPU or another player in this SPA",
@@ -15,7 +15,7 @@ const PROJECTS = [
   },
 
   {
-    name: "Space-Travelers",
+    name: "Space Travelers",
     image: { src: spacexTravelersImage, alt: "SpaceX website" },
     description:
       "SPA that allows you to browse upcoming SpaceX missions, select your preferred one, and reserve your spot with just a few clicks.",
@@ -36,7 +36,7 @@ const PROJECTS = [
 ---
 
 <div class="container">
-  <section class="section" id="projects">
+  <section class="section project-section" id="projects">
     <h2 class="section__title">Projects</h2>
     <p class="section__description">
       Each project a unique piece of development.
@@ -64,7 +64,7 @@ const PROJECTS = [
                 </ul>
                 <div class="project__links">
                   <a
-                    class="button button--primary"
+                    class="button button--primary button--small"
                     target="_blank"
                     href={project.liveLink}
                   >
@@ -90,7 +90,7 @@ const PROJECTS = [
                     <span>See live</span>
                   </a>
                   <a
-                    class="button button--secondary button--outline"
+                    class="button button--secondary button--outline button--small"
                     target="_blank"
                     href={project.sourceLink}
                   >
@@ -148,8 +148,10 @@ const PROJECTS = [
     }
 
     &__wrapper {
+      background-color: var(--accents-1);
       border: 1px solid var(--accents-2);
       border-radius: 1rem;
+      box-shadow: var(--project-shadow);
     }
 
     &__image-wrapper {
@@ -165,14 +167,15 @@ const PROJECTS = [
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
       font-weight: 600;
-      letter-spacing: -0.05em;
+      color: var(--accents-8);
+      letter-spacing: -0.01em;
     }
 
     &__description {
       margin-bottom: 1rem;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 400;
-      color: var(--accents-5);
+      color: var(--accents-6);
     }
 
     &__technologies {
@@ -183,8 +186,11 @@ const PROJECTS = [
 
       li {
         padding: 0.25rem 0.75rem;
-        border: 1px solid var(--accents-2);
+        font-size: 14px;
+        color: var(--accents-7);
+        border: 1px solid var(--accents-4);
         border-radius: 0.25rem;
+        box-shadow: var(--project-tech-shadow);
       }
     }
 
@@ -197,11 +203,27 @@ const PROJECTS = [
         text-decoration: none;
       }
     }
+
+    @media (width >= 640px) {
+      &__title {
+        font-size: 1.75rem;
+      }
+
+      &__description {
+        font-size: 1.1rem;
+      }
+    }
   }
 
-  @media (width >= 720px) {
+  @media (width >= 1024px) {
     .project {
       flex-direction: row;
+      padding: 1.25rem;
+    }
+
+    .project-section {
+      max-width: 960px;
+      margin-inline: auto;
     }
   }
 </style>
