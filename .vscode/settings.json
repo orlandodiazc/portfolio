@@ -7,5 +7,5 @@
     "typescriptreact" // Enable .tsx
   ],
 
-  "stylelint.validate": ["astro", "css"]
+  "stylelint.validate": ["astro", "css", "scss"]
 }
