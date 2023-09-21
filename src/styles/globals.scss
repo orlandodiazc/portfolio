@@ -1,34 +1,42 @@
 :root {
-  --accents-1: hsl(0, 0%, 95%);
-  --accents-2: hsl(0, 0%, 90%);
-  --accents-3: hsl(0, 0%, 70%);
-  --accents-4: hsl(0, 0%, 58%);
-  --accents-5: hsl(0, 0%, 40%);
-  --accents-6: hsl(0, 0%, 27%);
-  --accents-7: hsl(0, 0%, 13%);
-  --accents-8: hsl(0, 0%, 7%);
-  --primary: hsl(109, 41%, 32%);
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(0, 0%, 0%);
-  --gray-alpha-400: rgba(0, 0, 0, 0.08);
+  --accents-1: hsl(0deg 0% 98%);
+  --accents-2: hsl(0deg 0% 92%);
+  --accents-3: hsl(0deg 0% 63%);
+  --accents-4: hsl(0deg 0% 56%);
+  --accents-5: hsl(0deg 0% 40%);
+  --accents-6: hsl(0deg 0% 27%);
+  --accents-7: hsl(0deg 0% 16%);
+  --accents-8: hsl(0deg 0% 7%);
+  --primary: hsl(109deg 41% 32%);
+  --background: hsl(0deg 0% 100%);
+  --foreground: hsl(0deg 0% 0%);
+  --gray-alpha-400: rgb(0 0 0 / 8%);
   --header-box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%);
-  --footer-box-shadow: inset 0 0 0 -1px rgb(0 0 0 / 10%);
+  --footer-box-shadow: inset 0 1px 0 0 rgb(0 0 0 / 10%);
+  --shadow-sm: 0 3px 8px rgb(0 0 0 / 12%);
+  --shadow-md: 0 3px 25px rgb(0 0 0 / 10%);
+  --form-shadow: var(--shadow-md);
+  --project-shadow: var(--shadow-md);
+  --project-tech-shadow: var(--shadow-sm);
 }
 
 .dark {
-  --accents-8: hsl(0, 0%, 92%);
-  --accents-7: hsl(0, 0%, 85%);
-  --accents-6: hsl(0, 0%, 60%);
-  --accents-5: hsl(0, 0%, 53%);
-  --accents-4: hsl(0, 0%, 40%);
-  --accents-3: hsl(0, 0%, 27%);
-  --accents-2: hsl(0, 0%, 20%);
-  --accents-1: hsl(0, 0%, 7%);
-  --background: hsl(0, 0%, 0%);
-  --foreground: hsl(0, 0%, 100%);
-  --gray-alpha-400: rgba(255, 255, 255, 0.14);
+  --accents-8: hsl(0deg 0% 95%);
+  --accents-7: hsl(0deg 0% 90%);
+  --accents-6: hsl(0deg 0% 60%);
+  --accents-5: hsl(0deg 0% 53%);
+  --accents-4: hsl(0deg 0% 40%);
+  --accents-3: hsl(0deg 0% 27%);
+  --accents-2: hsl(0deg 0% 20%);
+  --accents-1: hsl(0deg 0% 3.5%);
+  --background: hsl(0deg 0% 0%);
+  --foreground: hsl(0deg 0% 100%);
+  --gray-alpha-400: rgb(255 255 255 / 14%);
   --header-box-shadow: inset 0 -1px 0 0 rgb(255 255 255 / 10%);
   --footer-box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 10%);
+  --form-shadow: none;
+  --project-shadow: none;
+  --project-tech-shadow: none;
 }
 
 html {
