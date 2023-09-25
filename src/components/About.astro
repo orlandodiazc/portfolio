@@ -1,0 +1,321 @@
+---
+import { Icon } from "astro-icon";
+const TECHNOLOGIES = [
+  {
+    title: "JavaScript",
+    imgSource: "/technologies/javascript.svg",
+  },
+  {
+    title: "TypeScript",
+    imgSource: "/technologies/typescript.svg",
+  },
+  {
+    title: "React",
+    imgSource: "/technologies/react.svg",
+  },
+  {
+    title: "Redux",
+    imgSource: "/technologies/redux.svg",
+  },
+  {
+    title: "Jest",
+    imgSource: "/technologies/jest.svg",
+  },
+  {
+    title: "Testing Library",
+    imgSource: "/technologies/testing-library.png",
+  },
+  {
+    title: "Vitest",
+    imgSource: "/technologies/vitest.svg",
+  },
+  {
+    title: "Sass",
+    imgSource: "/technologies/sass.svg",
+  },
+  {
+    title: "Tailwind",
+    imgSource: "/technologies/tailwind.svg",
+  },
+  {
+    title: "Bootstrap",
+    imgSource: "/technologies/bootstrap.svg",
+  },
+];
+
+const METHODS = [
+  "Git",
+  "Responsive Development",
+  "Gitflow",
+  "Netlify | Vercel",
+  "TDD",
+];
+---
+
+<div class="section__divider">
+  <section class="container section" id="about">
+    <h2 class="section__title">About</h2>
+    <div class="about">
+      <div class="about__me">
+        <div>
+          <div class="about__me-title">
+            <div class="about__me-title-icon-wrapper">
+              <Icon name="lucide:user" />
+            </div>
+            <h3 class="medium-heading">Me</h3>
+          </div>
+          <p class="small-p">
+            Hello, I'm Orlando - a front-end developer with passion for crafting
+            optimized and bug-free web applications.
+          </p>
+        </div>
+        <div>
+          <div class="about__me-title">
+            <div class="about__me-title-icon-wrapper">
+              <Icon name="lucide:skip-back" />
+            </div>
+            <h3 class="medium-heading">Background</h3>
+          </div>
+          <p class="small-p">
+            As an Electronic Engineering graduate, I have acquired essential
+            skills in logical thinking and algorithms, which has allowed me to
+            pursue self-taught education in web technologies.
+          </p>
+        </div>
+        <div>
+          <div class="about__me-title">
+            <div class="about__me-title-icon-wrapper">
+              <Icon name="lucide:thumbs-up" />
+            </div>
+            <h3 class="medium-heading">Interests</h3>
+          </div>
+
+          <p class="small-p">
+            I like playing the guitar, taking walks, watching or playing
+            football/soccer, and some times I enjoy web development streams.
+          </p>
+        </div>
+        <div class="about__me-resume-link">
+          <a
+            class="button button--primary button--small"
+            target="_blank"
+            href="https://docs.google.com/document/d/1ob48nGaTdvJbgWP7j1NaM-nHuzHx9P2P1fnGk-Yz2gE/edit?usp=sharing"
+            >Get my resume</a
+          >
+        </div>
+      </div>
+      <div class="skills__wrapper">
+        <div class="skills">
+          <div class="skills__subtitle-wrapper">
+            <h3 class="medium-heading">Front-end</h3>
+          </div>
+          <ul class="skills__list list">
+            {
+              TECHNOLOGIES.map(({ title, imgSource }) => (
+                <li class="skills__tech-item">
+                  <span>{title}</span>
+                  <div class="skills__tech-image-wrapper">
+                    <img src={imgSource} alt={title} />
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="skills">
+          <div class="skills__subtitle-wrapper">
+            <h3 class="medium-heading">Tools and Methods</h3>
+          </div>
+          <ul class="skills__list list">
+            {
+              METHODS.map((method) => (
+                <li class="skills__method-item">{method}</li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style lang="scss">
+  @use "styles/screen";
+
+  .about {
+    display: grid;
+    gap: 1rem;
+    margin-inline: auto;
+    margin-top: 2rem;
+
+    &__me {
+      display: flex;
+      flex-direction: column;
+      margin-inline: auto;
+      text-align: center;
+
+      > div {
+        margin-bottom: 0.5rem;
+      }
+
+      &-title {
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.25rem;
+
+        h3 {
+          margin-bottom: 0;
+        }
+
+        &-icon-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 28px;
+          aspect-ratio: 1;
+          padding: 0.3rem;
+          border: 1px solid var(--accents-4);
+          border-radius: 0.5rem;
+          box-shadow: var(--badge-shadow);
+        }
+      }
+
+      &-resume-link {
+        margin-bottom: 1.5rem;
+
+        a {
+          color: hsl(0deg 0% 5%);
+          text-decoration: none;
+          background-color: hsl(47deg 82% 43%);
+
+          &:hover {
+            background-color: hsl(47deg 82% 41%);
+          }
+        }
+
+        @media (min-width: screen.$sm) {
+          margin-inline: auto;
+        }
+
+        @media (min-width: screen.$md) {
+          margin: 0;
+          margin-inline-end: auto;
+        }
+      }
+
+      @media (min-width: screen.$lg) {
+        > div {
+          margin-bottom: 0;
+        }
+
+        &-title {
+          justify-content: start;
+        }
+      }
+    }
+
+    @media (min-width: screen.$lg) {
+      grid-template-columns: 1fr 45%;
+      grid-auto-flow: column;
+      gap: 1rem;
+
+      &__me {
+        text-align: left;
+      }
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    &__wrapper {
+      @media (min-width: screen.$lg) {
+        order: -1;
+      }
+    }
+
+    &__description {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      color: var(--accents-5);
+      text-align: center;
+      text-wrap: balance;
+      letter-spacing: -0.02em;
+
+      @media (min-width: screen.$sm) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__subtitle-wrapper {
+      width: 90%;
+      margin-inline: auto;
+      text-align: center;
+      border-block-end: 1px solid var(--accents-4);
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__tech-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      width: 5.5rem;
+      padding: 7px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accents-7);
+      background-color: var(--background);
+      border: 1px solid var(--accents-2);
+      box-shadow: var(--shadow-sm);
+
+      span {
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: ease 1s;
+
+        &:hover {
+          height: auto;
+          overflow: visible;
+        }
+      }
+    }
+
+    &__tech-image-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 1;
+
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &__method-item {
+      padding-inline: 0.5rem;
+      font-size: 1.1rem;
+      color: var(--accents-7);
+
+      @media (min-width: screen.$md) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+</style>
