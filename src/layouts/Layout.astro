@@ -11,6 +11,31 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <script is:inline>
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+
+      const defaultTheme = "system";
+      if (
+        (defaultTheme && defaultTheme.endsWith(":only")) ||
+        (!localStorage.theme && defaultTheme !== "system")
+      ) {
+        applyTheme(defaultTheme.replace(":only", ""));
+      } else if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        applyTheme("dark");
+      } else {
+        applyTheme("light");
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="description" content="Orlando's portfolio" />
     <meta name="viewport" content="width=device-width" />
@@ -33,9 +58,6 @@ const { title } = Astro.props;
   const themeToggler = document.querySelectorAll("[data-toggle-color-scheme]");
   themeToggler.forEach((elem) =>
     elem.addEventListener("click", () => {
-      if (defaultTheme.endsWith(":only")) {
-        return;
-      }
       document.documentElement.classList.toggle("dark");
       localStorage.theme = document.documentElement.classList.contains("dark")
         ? "dark"
@@ -45,31 +67,4 @@ const { title } = Astro.props;
         .forEach((elem) => elem.classList.toggle("hidden"));
     })
   );
-
-  function applyTheme(theme: string) {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document
-        .querySelectorAll(".theme-icon")
-        .forEach((elem) => elem.classList.toggle("hidden"));
-    }
-  }
-
-  const defaultTheme = "system";
-  if (
-    (defaultTheme && defaultTheme.endsWith(":only")) ||
-    (!localStorage.theme && defaultTheme !== "system")
-  ) {
-    applyTheme(defaultTheme.replace(":only", ""));
-  } else if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    applyTheme("dark");
-  } else {
-    applyTheme("light");
-  }
 </script>
