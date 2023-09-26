@@ -97,6 +97,10 @@ code {
   @media (min-width: screen.$lg) {
     max-width: screen.$lg;
   }
+
+  @media (min-width: screen.$xl) {
+    max-width: 1140px;
+  }
 }
 
 .list {

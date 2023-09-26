@@ -9,7 +9,7 @@ const PROJECTS = [
     name: "Tic Tac Toe",
     image: { src: ticTacToeImage, alt: "Tic tac toe website" },
     description:
-      "Play Tic Tac Toe games vs. a CPU or another player in this SPA.",
+      "Single page application where your can play Tic Tac Toe games versus a computer or another player.",
     technologies: ["React", "TypeScript", "TailwindCSS"],
     liveLink: "https://tic-tac-toe-orlando.vercel.app/",
     sourceLink: "https://github.com/orlandodiazc/tic-tac-toe_ts",
@@ -19,7 +19,7 @@ const PROJECTS = [
     name: "Space Travelers",
     image: { src: spacexTravelersImage, alt: "SpaceX website" },
     description:
-      "SPA that allows you to browse upcoming SpaceX missions, select your preferred one, and reserve your spot with just a few clicks.",
+      "Space tourism application with multi-page routing that allows you to browse upcoming SpaceX missions, select your preferred one, and reserve your spot with just a few clicks.",
     technologies: ["React", "Jest", "React Testing Library", "Bootstrap"],
     liveLink: "https://space-x-travelers.vercel.app/",
     sourceLink: "https://github.com/orlandodiazc/space-x-travelers-ts",
@@ -65,7 +65,7 @@ const PROJECTS = [
                 </ul>
                 <div class="project__links">
                   <a
-                    class="button button--primary button--small"
+                    class="button button--primary"
                     target="_blank"
                     href={project.liveLink}
                   >
@@ -75,7 +75,7 @@ const PROJECTS = [
                     <span>See live</span>
                   </a>
                   <a
-                    class="button button--secondary button--outline button--small"
+                    class="button button--secondary button--outline"
                     target="_blank"
                     href={project.sourceLink}
                   >
@@ -141,8 +141,8 @@ const PROJECTS = [
       margin-bottom: 1.5rem;
 
       li {
-        padding: 0.25rem 0.75rem;
-        font-size: 14px;
+        padding: 0.25rem 1rem;
+        font-size: 15px;
         color: var(--accents-8);
         border: 1px solid var(--accents-2);
         border-radius: 0.25rem;
@@ -153,7 +153,7 @@ const PROJECTS = [
     &__links {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.8rem;
 
       a {
         text-decoration: none;
