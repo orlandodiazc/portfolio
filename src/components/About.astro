@@ -1,45 +1,49 @@
 ---
-import { Icon } from "astro-icon";
+import { Sprite, Icon } from "astro-icon";
 const TECHNOLOGIES = [
   {
     title: "JavaScript",
-    imgSource: "/technologies/javascript.svg",
+    iconName: "javascript",
   },
   {
     title: "TypeScript",
-    imgSource: "/technologies/typescript.svg",
+    iconName: "typescript",
   },
   {
     title: "React",
-    imgSource: "/technologies/react.svg",
+    iconName: "react",
   },
   {
     title: "Redux",
-    imgSource: "/technologies/redux.svg",
+    iconName: "redux",
   },
   {
     title: "Jest",
-    imgSource: "/technologies/jest.svg",
+    iconName: "jest",
   },
   {
     title: "Testing Library",
-    imgSource: "/technologies/testing-library.png",
+    iconName: "testing-library",
   },
   {
     title: "Vitest",
-    imgSource: "/technologies/vitest.svg",
+    iconName: "vitest",
+  },
+  {
+    title: "Astro",
+    iconName: "astro",
   },
   {
     title: "Sass",
-    imgSource: "/technologies/sass.svg",
+    iconName: "sass",
   },
   {
     title: "Tailwind",
-    imgSource: "/technologies/tailwind.svg",
+    iconName: "tailwind",
   },
   {
     title: "Bootstrap",
-    imgSource: "/technologies/bootstrap.svg",
+    iconName: "bootstrap",
   },
 ];
 
@@ -48,7 +52,9 @@ const METHODS = [
   "Responsive Development",
   "Gitflow",
   "Netlify | Vercel",
+  "VSCode",
   "TDD",
+  "Debugging",
 ];
 ---
 
@@ -110,16 +116,18 @@ const METHODS = [
             <h3 class="medium-heading">Front-end</h3>
           </div>
           <ul class="skills__list list">
-            {
-              TECHNOLOGIES.map(({ title, imgSource }) => (
-                <li class="skills__tech-item">
-                  <span>{title}</span>
-                  <div class="skills__tech-image-wrapper">
-                    <img src={imgSource} alt={title} />
-                  </div>
-                </li>
-              ))
-            }
+            <Sprite.Provider>
+              {
+                TECHNOLOGIES.map(({ title, iconName }) => (
+                  <li class="skills__tech-item">
+                    <span>{title}</span>
+                    <div class="skills__tech-image-wrapper">
+                      <Sprite name={iconName} />
+                    </div>
+                  </li>
+                ))
+              }
+            </Sprite.Provider>
           </ul>
         </div>
         <div class="skills">
@@ -217,9 +225,8 @@ const METHODS = [
     }
 
     @media (min-width: screen.$lg) {
-      grid-template-columns: 1fr 45%;
+      grid-template-columns: 1fr 41%;
       grid-auto-flow: column;
-      gap: 1.25rem;
 
       &__me {
         text-align: left;
@@ -264,7 +271,6 @@ const METHODS = [
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      align-items: center;
       justify-content: center;
     }
 
@@ -297,19 +303,11 @@ const METHODS = [
 
     &__tech-image-wrapper {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      aspect-ratio: 1;
-
-      img {
-        width: auto;
-        height: auto;
-      }
+      height: 4rem;
     }
 
     &__method-item {
-      padding-inline: 0.5rem;
+      padding-inline: 0.75rem;
       font-size: 1.1rem;
       color: var(--accents-7);
 
