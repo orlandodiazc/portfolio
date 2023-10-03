@@ -13,7 +13,7 @@ import { Icon } from "astro-icon";
       project, don't hesitate to contact me.
     </p>
     <div class="hero__buttons">
-      <div class="hero__button-container">
+      <div>
         <a
           href="https://www.linkedin.com/in/orlando-diaz-conde/"
           target="_blank"
@@ -25,7 +25,7 @@ import { Icon } from "astro-icon";
           <span>Connect</span>
         </a>
       </div>
-      <div class="hero__button-container">
+      <div>
         <a
           href="https://github.com/orlandodiazc"
           target="_blank"
@@ -33,10 +33,10 @@ import { Icon } from "astro-icon";
           aria-label="Github"
         >
           <span class="icon-wrapper--small"><Icon name="lucide:github" /></span>
-          <span>Github</span>
+          <span class="hero__button-title">Github</span>
         </a>
       </div>
-      <div class="hero__button-container">
+      <div>
         <a
           href="https://docs.google.com/document/d/1ob48nGaTdvJbgWP7j1NaM-nHuzHx9P2P1fnGk-Yz2gE/edit?usp=sharing"
           target="_blank"
@@ -46,7 +46,7 @@ import { Icon } from "astro-icon";
           <span class="icon-wrapper--small"
             ><Icon name="lucide:file-text" /></span
           >
-          <span>Resume</span>
+          <span class="hero__button-title">Resume</span>
         </a>
       </div>
     </div>
@@ -124,11 +124,15 @@ import { Icon } from "astro-icon";
       }
     }
 
-    &__button-container {
-      padding-block: 0.5rem;
+    &__button-title {
+      display: none;
     }
 
     @media (min-width: screen.$md) {
+      &__button-title {
+        display: inline-block;
+      }
+
       &__title {
         font-size: 5rem;
       }

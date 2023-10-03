@@ -38,7 +38,7 @@
   --accents-3: hsl(0deg 0% 27%);
   --accents-2: hsl(0deg 0% 20%);
   --accents-1: hsl(0deg 0% 7%);
-  --primary: hsl(109deg 50% 32%);
+  --primary: hsl(47deg 80% 43%);
   --background: hsl(0deg 0% 0%);
   --foreground: hsl(0deg 0% 100%);
   --gray-alpha-400: rgb(255 255 255 / 14%);
@@ -173,7 +173,7 @@ code {
   }
 
   &--transparent {
-    padding-inline: 1rem;
+    padding-inline: 0.8rem;
     color: var(--foreground);
     background-color: transparent;
     transition: 150ms ease;
