@@ -18,7 +18,6 @@
   --shadow-md: 0 2px 7px rgb(0 0 0 / 10%);
   --header-background: hsl(0deg 0% 100% / 80%);
   --header-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%);
-  --button-outline: green;
   --hero-gradient: radial-gradient(
     circle,
     rgb(200 161 20 / 30%) 0%,
@@ -50,7 +49,6 @@
     rgb(60 115 48 / 25%) 0,
     rgb(60 115 48 / 0%) 65%
   );
-  --button-outline: red;
   --project-shadow: none;
   --badge-shadow: none;
   --form-shadow: none;
@@ -171,6 +169,17 @@ code {
 
     &:hover {
       background-color: var(--accents-2);
+    }
+  }
+
+  &--transparent {
+    padding-inline: 1rem;
+    color: var(--foreground);
+    background-color: transparent;
+    transition: 150ms ease;
+
+    &:hover {
+      background-color: var(--gray-alpha-400);
     }
   }
 

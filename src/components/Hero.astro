@@ -29,20 +29,22 @@ import { Icon } from "astro-icon";
         <a
           href="https://github.com/orlandodiazc"
           target="_blank"
-          class="button button--outline hero__icon-button"
+          class="button button--transparent button--outline"
           aria-label="Github"
         >
           <span class="icon-wrapper--small"><Icon name="lucide:github" /></span>
+          <span>Github</span>
         </a>
       </div>
       <div class="hero__button-container">
         <a
           href="mailto:orlandodiazconde@gmail.com"
           target="_blank"
-          class="button button--outline hero__icon-button"
+          class="button button--transparent button--outline"
           aria-label="Orlando's email"
         >
           <span class="icon-wrapper--small"><Icon name="lucide:mail" /></span>
+          <span>Resume</span>
         </a>
       </div>
     </div>
@@ -122,17 +124,6 @@ import { Icon } from "astro-icon";
 
     &__button-container {
       padding-block: 0.5rem;
-    }
-
-    &__icon-button {
-      width: 3rem;
-      padding: 0;
-      color: var(--accents-8);
-      background-color: transparent;
-
-      &:hover {
-        background-color: var(--gray-alpha-400);
-      }
     }
 
     @media (min-width: screen.$md) {
