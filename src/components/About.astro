@@ -57,7 +57,7 @@ const METHODS = [
 <div class="section__divider">
   <section class="container section" id="about">
     <h2 class="section__title">About</h2>
-    <div class="about">
+    <div class="about" data-inviewport>
       <div class="about__me">
         <div>
           <div class="about__me-title">
@@ -111,7 +111,7 @@ const METHODS = [
           <div class="skills__subtitle-wrapper">
             <h3 class="medium-heading">Front-end</h3>
           </div>
-          <ul class="skills__list list">
+          <ul class="skills__list list" data-inviewport>
             <Sprite.Provider>
               {
                 TECHNOLOGIES.map(({ title, iconName }) => (

@@ -12,29 +12,29 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <script is:inline>
-      function applyTheme(theme) {
-        if (theme === "dark") {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      }
-
-      const defaultTheme = "system";
-      if (
-        (defaultTheme && defaultTheme.endsWith(":only")) ||
-        (!localStorage.theme && defaultTheme !== "system")
-      ) {
-        applyTheme(defaultTheme.replace(":only", ""));
-      } else if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        applyTheme("dark");
+    function applyTheme(theme) {
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
       } else {
-        applyTheme("light");
+        document.documentElement.classList.remove("dark");
       }
+    }
+
+    const defaultTheme = "system";
+    if (
+      (defaultTheme && defaultTheme.endsWith(":only")) ||
+      (!localStorage.theme && defaultTheme !== "system")
+    ) {
+      applyTheme(defaultTheme.replace(":only", ""));
+    } else if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      applyTheme("dark");
+    } else {
+      applyTheme("light");
+    }
     </script>
     <meta charset="UTF-8" />
     <meta name="description" content="Orlando's portfolio" />
@@ -67,4 +67,22 @@ const { title } = Astro.props;
         .forEach((elem) => elem.classList.toggle("hidden"));
     })
   );
+
+  const inViewport = (
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver
+  ) => {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade");
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const Obs = new IntersectionObserver(inViewport, { threshold: 0.3 });
+
+  document.querySelectorAll<HTMLElement>("[data-inviewport]").forEach((el) => {
+    Obs.observe(el);
+  });
 </script>

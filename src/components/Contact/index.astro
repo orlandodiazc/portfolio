@@ -6,22 +6,24 @@ import ContactForm from "./ContactForm.astro";
 <div class="section__divider">
   <section class="container section" id="contact">
     <h2 class="section__title">Contact</h2>
-    <p class="section__description">
-      I'm always interested in hearing about new projects, so if you'd like to
-      chat please get in touch.
-    </p>
-    <ContactForm />
-    <div class="contact__email">
-      <a
-        href="mailto:orlandodiazconde@gmail.com"
-        aria-label="Orlando's email"
-        class="contact__email-link"
-      >
-        <span class="icon-wrapper--large"
-          ><Icon name="lucide:mail" class="icon-lg" /></span
+    <div data-inviewport>
+      <p class="section__description">
+        I'm always interested in hearing about new projects, so if you'd like to
+        chat please get in touch.
+      </p>
+      <ContactForm />
+      <div class="contact__email">
+        <a
+          href="mailto:orlandodiazconde@gmail.com"
+          aria-label="Orlando's email"
+          class="contact__email-link"
         >
-      </a>
-      <span>orlandodiazconde@gmail.com</span>
+          <span class="icon-wrapper--large"
+            ><Icon name="lucide:mail" class="icon-lg" /></span
+          >
+        </a>
+        <span>orlandodiazconde@gmail.com</span>
+      </div>
     </div>
   </section>
 </div>
