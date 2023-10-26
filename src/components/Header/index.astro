@@ -233,15 +233,13 @@ const navItems = [
 
     const headerWrapper = document.querySelector(".header__wrapper");
     const root = document.documentElement;
+    onScrollHandler();
 
     function onScrollHandler() {
-      if (root.scrollTop === 0) {
-        headerWrapper?.classList.remove("header__border-onscroll");
-      } else if (
-        !headerWrapper?.classList.contains("header__border-onscroll")
-      ) {
-        headerWrapper?.classList.add("header__border-onscroll");
-      }
+      headerWrapper?.classList.toggle(
+        "header__border-onscroll",
+        root.scrollTop !== 0
+      );
     }
 
     document.addEventListener("scroll", onScrollHandler);
