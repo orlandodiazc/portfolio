@@ -37,23 +37,17 @@
   form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    padding: 1.5rem;
-    margin-block: 1.5rem;
+    margin-bottom: 1.5rem;
     margin-inline: auto;
     background-color: var(--background);
-    border: 1px solid var(--accents-2);
     border-radius: 1rem;
-    box-shadow: var(--form-shadow);
   }
 
   .form {
     &__button-wrapper {
-      align-self: center;
-
       button {
-        color: hsl(0deg 0% 98%);
-        background-color: hsl(109deg 53% 20%);
+        color: rgb(230, 230, 230);
+        background-color: var(--form-submit-color);
 
         &:disabled {
           cursor: not-allowed;
@@ -78,9 +72,10 @@
         width: 100%;
         padding: 0.5rem;
         color: var(--foreground);
-        background-color: inherit;
-        border: 1px solid var(--accents-4);
+        background-color: var(--accents-1);
+        border: 1px solid var(--accents-3);
         border-radius: 0.3rem;
+        margin-top: 0.1rem;
       }
 
       input:-webkit-autofill,
@@ -99,9 +94,10 @@
         padding: 0.5rem;
         color: var(--foreground);
         resize: vertical;
-        background-color: inherit;
-        border: 1px solid var(--accents-6);
+        background-color: var(--accents-1);
+        border: 1px solid var(--accents-3);
         border-radius: 0.3rem;
+        margin-top: 0.1rem;
       }
     }
 
@@ -117,10 +113,10 @@
 
 <script>
   const form = document.getElementById(
-    "contact-form"
+    "contact-form",
   ) as HTMLFormElement | null;
   const result: HTMLButtonElement | null = document.querySelector(
-    ".form__button-wrapper button"
+    ".form__button-wrapper button",
   );
 
   form?.addEventListener("submit", function (e) {

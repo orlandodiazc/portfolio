@@ -1,6 +1,6 @@
 ---
-import 'styles/global.scss';
-import '@fontsource-variable/inter';
+import "styles/global.scss";
+import "@fontsource-variable/inter";
 interface Props {
   title: string;
 }
@@ -12,29 +12,29 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <script is:inline>
-    function applyTheme(theme) {
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
       }
-    }
 
-    const defaultTheme = 'system';
-    if (
-      (defaultTheme && defaultTheme.endsWith(':only')) ||
-      (!localStorage.theme && defaultTheme !== 'system')
-    ) {
-      applyTheme(defaultTheme.replace(':only', ''));
-    } else if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      applyTheme('dark');
-    } else {
-      applyTheme('light');
-    }
+      const defaultTheme = "system";
+      if (
+        (defaultTheme && defaultTheme.endsWith(":only")) ||
+        (!localStorage.theme && defaultTheme !== "system")
+      ) {
+        applyTheme(defaultTheme.replace(":only", ""));
+      } else if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        applyTheme("dark");
+      } else {
+        applyTheme("light");
+      }
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,31 +62,64 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-nav" href="#skip-nav">Skip to content →</a>
     <slot />
   </body>
 </html>
 
+<style>
+  .skip-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: var(--layer-skip-nav);
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 16px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    opacity: 0;
+  }
+</style>
+
 <script>
-  const themeToggler = document.querySelectorAll('[data-toggle-color-scheme]');
+  const skipNav = document.querySelector(".skip-nav") as HTMLElement;
+  skipNav.addEventListener("focus", () => {
+    skipNav.style.opacity = "1";
+  });
+
+  skipNav.addEventListener("blur", () => {
+    skipNav.style.opacity = "0";
+  });
+
+  const themeToggler = document.querySelectorAll("[data-toggle-color-scheme]");
   themeToggler.forEach((elem) =>
-    elem.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      localStorage.theme = document.documentElement.classList.contains('dark')
-        ? 'dark'
-        : 'light';
+    elem.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      localStorage.theme = document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
       document
-        .querySelectorAll('.theme-icon')
-        .forEach((elem) => elem.classList.toggle('hidden'));
-    })
+        .querySelectorAll(".theme-icon")
+        .forEach((elem) => elem.classList.toggle("hidden"));
+    }),
   );
 
   const inViewport = (
     entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver
+    observer: IntersectionObserver,
   ) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('fade');
+        entry.target.classList.add("fade");
         observer.unobserve(entry.target);
       }
     });
@@ -94,7 +127,7 @@ const { title } = Astro.props;
 
   const Obs = new IntersectionObserver(inViewport, { threshold: 0.3 });
 
-  document.querySelectorAll<HTMLElement>('[data-inviewport]').forEach((el) => {
+  document.querySelectorAll<HTMLElement>("[data-inviewport]").forEach((el) => {
     Obs.observe(el);
   });
 </script>

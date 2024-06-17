@@ -1,49 +1,49 @@
 ---
-import { Image } from 'astro:assets';
-import ticTacToeImage from './images/tic-tac-toe.png';
-import spacexTravelersImage from './images/space-x-travelers.png';
-import mathematiciansImage from './images/mathematicians-rn.png';
-import wordleImage from './images/wordle.png';
+import { Image } from "astro:assets";
+import ticTacToeImage from "./images/tic-tac-toe.png";
+import spacexTravelersImage from "./images/space-x-travelers.png";
+import mathematiciansImage from "./images/mathematicians-rn.png";
+import wordleImage from "./images/wordle.png";
 
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 const PROJECTS = [
   {
-    name: 'Mathematicians',
-    image: { src: mathematiciansImage, alt: 'Mathematicians website' },
+    name: "Mathematicians",
+    image: { src: mathematiciansImage, alt: "Mathematicians website" },
     description:
-      'Mathematicians is an multiplatform app built with React Native. You can use it to perform quick math calculations, convert currencies and physical units.',
-    technologies: ['React', 'TypeScript', 'React Native'],
-    liveLink: 'https://mathematicians.vercel.app/',
-    sourceLink: 'https://github.com/orlandodiazc/mathematicians-rn',
+      "Mathematicians is an multiplatform app built with React Native. You can use it to perform quick math calculations, convert currencies and physical units.",
+    technologies: ["React", "TypeScript", "React Native"],
+    liveLink: "https://mathematicians.vercel.app/",
+    sourceLink: "https://github.com/orlandodiazc/mathematicians-rn",
   },
   {
-    name: 'Tic Tac Toe',
-    image: { src: ticTacToeImage, alt: 'Tic tac toe website' },
+    name: "Tic Tac Toe",
+    image: { src: ticTacToeImage, alt: "Tic tac toe website" },
     description:
-      'Single page application where you can play Tic Tac Toe games versus a computer or another player.',
-    technologies: ['React', 'TypeScript', 'TailwindCSS'],
-    liveLink: 'https://tic-tac-toe-orlando.vercel.app/',
-    sourceLink: 'https://github.com/orlandodiazc/tic-tac-toe',
-  },
-
-  {
-    name: 'Space Travelers',
-    image: { src: spacexTravelersImage, alt: 'SpaceX website' },
-    description:
-      'Space tourism application with multi-page routing that allows you to browse upcoming SpaceX missions, select your preferred one, and reserve your spot with just a few clicks.',
-    technologies: ['React', 'TypeScript', 'Redux', 'TailwindCSS'],
-    liveLink: 'https://space-x-travelers.vercel.app/',
-    sourceLink: 'https://github.com/orlandodiazc/space-x-travelers',
+      "Single page application where you can play Tic Tac Toe games versus a computer or another player.",
+    technologies: ["React", "TypeScript", "TailwindCSS"],
+    liveLink: "https://tic-tac-toe-orlando.vercel.app/",
+    sourceLink: "https://github.com/orlandodiazc/tic-tac-toe",
   },
 
   {
-    name: 'Wordle',
-    image: { src: wordleImage, alt: 'Wordle website' },
+    name: "Space Travelers",
+    image: { src: spacexTravelersImage, alt: "SpaceX website" },
     description:
-      'Wordle is a popular online video game, you have 6 chances to guess the correct 5 letter word or you will lose, give it a go!',
-    technologies: ['React', 'TypeScript', 'TailwindCSS'],
-    liveLink: 'https://wordle-orlando.vercel.app/',
-    sourceLink: 'https://github.com/orlandodiazc/wordle',
+      "Space tourism application with multi-page routing that allows you to browse upcoming SpaceX missions, select your preferred one, and reserve your spot with just a few clicks.",
+    technologies: ["React", "TypeScript", "Redux", "TailwindCSS"],
+    liveLink: "https://space-x-travelers.vercel.app/",
+    sourceLink: "https://github.com/orlandodiazc/space-x-travelers",
+  },
+
+  {
+    name: "Wordle",
+    image: { src: wordleImage, alt: "Wordle website" },
+    description:
+      "Wordle is a popular online video game, you have 6 chances to guess the correct 5 letter word or you will lose, give it a go!",
+    technologies: ["React", "TypeScript", "TailwindCSS"],
+    liveLink: "https://wordle-orlando.vercel.app/",
+    sourceLink: "https://github.com/orlandodiazc/wordle",
   },
 ];
 ---
@@ -107,7 +107,7 @@ const PROJECTS = [
 </div>
 
 <style lang="scss">
-  @use 'styles/screen';
+  @use "styles/screen";
 
   .project-list {
     display: flex;
