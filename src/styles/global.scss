@@ -2,25 +2,25 @@
 @use "screen";
 
 :root {
-  --accents-1: hsl(0deg 0% 95%);
-  --accents-2: hsl(0deg 0% 90%);
-  --accents-3: hsl(0deg 0% 70%);
-  --accents-4: hsl(0deg 0% 53%);
-  --accents-5: hsl(0deg 0% 40%);
-  --accents-6: hsl(0deg 0% 27%);
-  --accents-7: hsl(0deg 0% 20%);
-  --accents-8: hsl(0deg 0% 9%);
+  --accents-1: #fff;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
   --primary: hsl(109deg 70% 32%);
-  --background: hsl(0deg 0% 97%);
+  --background: #fafafa;
   --foreground: hsl(0deg 0% 0%);
   --gray-alpha-400: rgb(0 0 0 / 8%);
-  --shadow-sm: 0 1px 4px rgb(0 0 0 / 7%);
-  --shadow-md: 0 2px 7px rgb(0 0 0 / 10%);
+  --shadow-sm: 0 1px 4px rgb(0 0 0 / 2%);
+  --shadow-md: 0 2px 7px rgb(0 0 0 / 5%);
   --layer-skip-nav: 20;
   --layer-header: 10;
   --header-top: 1rem;
   --header-height: 4rem;
-  --header-background: hsl(0deg 0% 97% / 80%);
+  --header-background: hsl(0deg 0% 94% / 80%);
   --hero-gradient: radial-gradient(
     circle,
     rgb(200 161 20 / 30%) 0%,
@@ -33,19 +33,19 @@
 }
 
 .dark {
-  --accents-8: hsl(0deg 0% 93%);
-  --accents-7: hsl(0deg 0% 88%);
-  --accents-6: hsl(0deg 0% 65%);
-  --accents-5: hsl(0deg 0% 53%);
-  --accents-4: hsl(0deg 0% 40%);
-  --accents-3: hsl(0deg 0% 27%);
-  --accents-2: hsl(0deg 0% 20%);
-  --accents-1: hsl(0deg 0% 4%);
+  --accents-8: #fafafa;
+  --accents-7: #eaeaea;
+  --accents-6: #999;
+  --accents-5: #888;
+  --accents-4: #666;
+  --accents-3: #444;
+  --accents-2: #333;
+  --accents-1: hsl(0, 0%, 3%);
   --primary: hsl(47deg 80% 43%);
-  --background: hsl(0deg 0% 0%);
-  --foreground: hsl(0deg 0% 100%);
+  --background: #000;
+  --foreground: #fff;
   --gray-alpha-400: rgb(255 255 255 / 14%);
-  --header-background: rgb(0 0 0 / 50%);
+  --header-background: rgb(0 0 0 / 80%);
   --hero-gradient: radial-gradient(
     circle,
     rgb(60 115 48 / 25%) 0,
@@ -223,7 +223,7 @@ code {
 }
 
 .medium-heading {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-size: 22px;
   font-weight: 500;
   color: var(--accents-7);
@@ -236,7 +236,7 @@ code {
 
 .small-p {
   margin-bottom: 1rem;
-  color: var(--accents-5);
+  color: var(--accents-6);
   letter-spacing: -0.02em;
 
   @media (min-width: screen.$sm) {

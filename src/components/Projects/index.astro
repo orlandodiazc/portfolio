@@ -4,45 +4,88 @@ import ticTacToeImage from "./images/tic-tac-toe.png";
 import spacexTravelersImage from "./images/space-x-travelers.png";
 import mathematiciansImage from "./images/mathematicians-rn.png";
 import wordleImage from "./images/wordle.png";
+import acmeImage from "./images/acme.png";
+import complNotesImages from "./images/compl-notes.png";
 
 import { Icon } from "astro-icon";
+
 const PROJECTS = [
   {
+    name: "Compl Notes",
+    stack: "Full-stack",
+    image: { src: acmeImage, alt: "Comple notes website" },
+    description:
+      "Full-stack web application to effortlessly track your own notes and those of your friends.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+    ],
+    liveLink: "https://compl-notes.odiaz.com.co",
+    sourceLink: "https://github.com/orlandodiazc/compl-notes",
+  },
+  {
+    name: "Acme",
+    stack: "Full-stack",
+    image: { src: complNotesImages, alt: "Acme website" },
+    description:
+      "Full-stack application designed to keep track of invoices. It's a clone of Next.js' Acme Dashboard.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+    ],
+    liveLink: "https://acme.odiaz.com.co",
+    sourceLink: "https://github.com/orlandodiazc/acme",
+  },
+  {
     name: "Mathematicians",
+    stack: "Front-end",
     image: { src: mathematiciansImage, alt: "Mathematicians website" },
     description:
       "Mathematicians is an multiplatform app built with React Native. You can use it to perform quick math calculations, convert currencies and physical units.",
     technologies: ["React", "TypeScript", "React Native"],
-    liveLink: "https://mathematicians.vercel.app/",
+    liveLink: "https://mathematicians.odiaz.com.co",
     sourceLink: "https://github.com/orlandodiazc/mathematicians-rn",
   },
   {
     name: "Tic Tac Toe",
+    stack: "Front-end",
     image: { src: ticTacToeImage, alt: "Tic tac toe website" },
     description:
       "Single page application where you can play Tic Tac Toe games versus a computer or another player.",
     technologies: ["React", "TypeScript", "TailwindCSS"],
-    liveLink: "https://tic-tac-toe-orlando.vercel.app/",
+    liveLink: "https://tic-tac-toe.odiaz.com.co",
     sourceLink: "https://github.com/orlandodiazc/tic-tac-toe",
   },
 
   {
     name: "Space Travelers",
+    stack: "Front-end",
     image: { src: spacexTravelersImage, alt: "SpaceX website" },
     description:
       "Space tourism application with multi-page routing that allows you to browse upcoming SpaceX missions, select your preferred one, and reserve your spot with just a few clicks.",
     technologies: ["React", "TypeScript", "Redux", "TailwindCSS"],
-    liveLink: "https://space-x-travelers.vercel.app/",
+    liveLink: "https://space-travelers.odiaz.com.co",
     sourceLink: "https://github.com/orlandodiazc/space-x-travelers",
   },
 
   {
     name: "Wordle",
+    stack: "Front-end",
     image: { src: wordleImage, alt: "Wordle website" },
     description:
       "Wordle is a popular online video game, you have 6 chances to guess the correct 5 letter word or you will lose, give it a go!",
     technologies: ["React", "TypeScript", "TailwindCSS"],
-    liveLink: "https://wordle-orlando.vercel.app/",
+    liveLink: "https://wordle.odiaz.com.co",
     sourceLink: "https://github.com/orlandodiazc/wordle",
   },
 ];
@@ -57,24 +100,35 @@ const PROJECTS = [
     <div class="project-list">
       {
         PROJECTS.map((project) => (
-          <div class="project__wrapper" data-inviewport>
-            <article class="project">
-              <div class="project__image">
-                <Image
-                  src={project.image.src}
-                  width={860}
-                  height={538}
-                  alt={project.image.alt}
-                />
-              </div>
-              <div>
-                <h3 class="medium-heading">{project.name}</h3>
-                <p class="small-p">{project.description}</p>
-                <ul class="project__technologies list">
-                  {project.technologies.map((technology) => (
-                    <li>{technology}</li>
-                  ))}
-                </ul>
+          <>
+            <div class="project__wrapper" data-inviewport>
+              <article class="project">
+                <div class="project__image">
+                  <Image
+                    src={project.image.src}
+                    width={1280}
+                    height={800}
+                    alt={project.image.alt}
+                  />
+                </div>
+                <div>
+                  <div class="project__heading-wrapper">
+                    <h3 class="medium-heading project__title">
+                      {project.name}
+                    </h3>
+                    <span class="badge project__heading-badge">
+                      {project.stack}
+                    </span>
+                  </div>
+                  <p class="small-p project__description">
+                    {project.description}
+                  </p>
+                  <ul class="project__technologies list">
+                    {project.technologies.map((technology) => (
+                      <li class="badge">{technology}</li>
+                    ))}
+                  </ul>
+                </div>
                 <div class="project__links">
                   <a
                     class="button button--primary"
@@ -87,7 +141,7 @@ const PROJECTS = [
                     <span>See live</span>
                   </a>
                   <a
-                    class="button button--secondary button--outline"
+                    class="button button--transparent button--outline"
                     target="_blank"
                     href={project.sourceLink}
                   >
@@ -97,9 +151,9 @@ const PROJECTS = [
                     <span>See code</span>
                   </a>
                 </div>
-              </div>
-            </article>
-          </div>
+              </article>
+            </div>
+          </>
         ))
       }
     </div>
@@ -109,27 +163,52 @@ const PROJECTS = [
 <style lang="scss">
   @use "styles/screen";
 
+  .badge {
+    padding: 0.05rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    color: var(--accents-8);
+    font-size: 14px;
+    border: 1px solid var(--accents-2);
+    border-radius: 0.25rem;
+    box-shadow: var(--badge-shadow);
+  }
+
   .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    display: grid;
+    grid-gap: 2rem;
+
+    @media (min-width: screen.$lg) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .project {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-
-    > div {
-      flex: 1;
-    }
+    gap: 0.5rem;
+    padding: 1.25rem;
+    height: 100%;
 
     &__wrapper {
-      background-color: var(--background);
+      background-color: var(--accents-1);
       border: 1px solid var(--accents-2);
       border-radius: 1rem;
       box-shadow: var(--project-shadow);
+    }
+
+    &__heading-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &__heading-badge {
+      margin-top: 0.15rem;
+    }
+
+    &__title {
+      margin-bottom: 0;
     }
 
     &__image {
@@ -146,29 +225,29 @@ const PROJECTS = [
       }
     }
 
+    &__description {
+      margin-bottom: 0.5rem;
+    }
+
     &__technologies {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1.5rem;
-
-      li {
-        padding: 0.25rem 0.75rem;
-        font-size: 15px;
-        color: var(--accents-8);
-        border: 1px solid var(--accents-2);
-        border-radius: 0.25rem;
-        box-shadow: var(--badge-shadow);
-      }
+      margin-bottom: 0.25rem;
     }
 
     &__links {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
+      margin-top: auto;
 
       a {
         text-decoration: none;
+      }
+
+      @media (min-width: screen.$md) {
+        flex-direction: row;
       }
     }
 
@@ -180,11 +259,6 @@ const PROJECTS = [
       &__description {
         font-size: 1.1rem;
       }
-    }
-
-    @media (min-width: screen.$lg) {
-      flex-direction: row;
-      padding: 1.25rem;
     }
   }
 </style>

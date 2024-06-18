@@ -67,7 +67,7 @@ const { title } = Astro.props;
   </body>
 </html>
 
-<style>
+<style lang="scss">
   .skip-nav {
     position: fixed;
     top: var(--header-height);
@@ -87,19 +87,14 @@ const { title } = Astro.props;
     -moz-user-select: none;
     user-select: none;
     opacity: 0;
+
+    &:focus {
+      opacity: 100;
+    }
   }
 </style>
 
 <script>
-  const skipNav = document.querySelector(".skip-nav") as HTMLElement;
-  skipNav.addEventListener("focus", () => {
-    skipNav.style.opacity = "1";
-  });
-
-  skipNav.addEventListener("blur", () => {
-    skipNav.style.opacity = "0";
-  });
-
   const themeToggler = document.querySelectorAll("[data-toggle-color-scheme]");
   themeToggler.forEach((elem) =>
     elem.addEventListener("click", () => {
