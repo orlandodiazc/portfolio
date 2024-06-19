@@ -78,7 +78,7 @@ const navItems = [
             >
           </a>
           <a
-            href="https://docs.google.com/document/d/1ob48nGaTdvJbgWP7j1NaM-nHuzHx9P2P1fnGk-Yz2gE/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1nz5CCcsTaH7enlMZbuXHuxr2ZSsLGSEr/view?usp=sharing"
             target="_blank"
             class="button button--icon button--transparent"
             aria-label="Orlando's resume"
@@ -243,7 +243,7 @@ const navItems = [
           document.body.style.overflow === "" ? "hidden" : "";
       }
       const menuButton = document.getElementById(
-        "mobile-menu-toggle",
+        "mobile-menu-toggle"
       ) as HTMLElement;
 
       const mobileMenuIcons = document.querySelectorAll(".mobile-menu-icon");
@@ -253,7 +253,7 @@ const navItems = [
       const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
 
       mobileMenuLinks.forEach((link) =>
-        link.addEventListener("click", toggleMobileNav),
+        link.addEventListener("click", toggleMobileNav)
       );
 
       window.addEventListener("resize", () => {
